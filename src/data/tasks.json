@@ -1,0 +1,129 @@
+[
+  {
+    "id": 1,
+    "label": "MVP scope (CSME+CLE)",
+    "user": 6,
+    "start": "2019-08-01",
+    "duration": 140,
+    "percent": 20,
+    "type": "project",
+    "collapsed": false
+  },
+  {
+    "id": 2,
+    "label": "Subscription, Environment provisioning automation - reduced scope",
+    "user": 2,
+    "start": "2019-08-01",
+    "duration": 140,
+    "percent": 15,
+    "type": "project",
+    "collapsed": false,
+    "style": {
+      "base": {
+        "fill": "#1EBC61",
+        "stroke": "#0EAC51"
+      }
+    }
+  },
+  {
+    "id": 3,
+    "label": "Release pipeline improvements - reduced scope",
+    "user": 1,
+    "start": "2019-08-01",
+    "duration": 140,
+    "percent": 15,
+    "type": "project",
+    "collapsed": false,
+    "style": {
+      "base": {
+        "fill": "#0287D0",
+        "stroke": "#0077C0"
+      }
+    }
+  },
+  {
+    "id": 4,
+    "label": "Documentation",
+    "user": 2,
+    "start": "2019-10-01",
+    "duration": 80,
+    "percent": 0,
+    "type": "project",
+    "collapsed": false,
+    "style": {
+      "base": {
+        "fill": "#8E44AD",
+        "stroke": "#7E349D"
+      }
+    }
+  },
+  {
+    "id": 5,
+    "label": "Reduce system outage time during updates",
+    "user": 1,
+    "start": "2019-09-05",
+    "duration": 30,
+    "percent": 0,
+    "type": "project",
+    "collapsed": false,
+    "style": {
+      "base": {
+        "fill": "#8E44AD",
+        "stroke": "#7E349D"
+      }
+    }
+  },
+  {
+    "id": 6,
+    "label": "Deployment/Slack support",
+    "user": 1.5,
+    "start": "2019-08-01",
+    "duration": 140,
+    "percent": 0,
+    "type": "project",
+    "collapsed": false,
+    "style": {
+      "base": {
+        "fill": "#8E44AD",
+        "stroke": "#7E349D"
+      }
+    }
+  },
+  {
+    "id": 7,
+    "label": "JIRA/GFI teams support",
+    "user": 2,
+    "start": "2019-08-01",
+    "duration": 140,
+    "percent": 0,
+    "type": "project",
+    "collapsed": false,
+    "style": {
+      "base": {
+        "fill": "#8E44AD",
+        "stroke": "#7E349D"
+      }
+    }
+  },
+  {
+    "id": 8,
+    "label": "OnBoarding",
+    "user": 4,
+    "start": "2019-09-02",
+    "duration": 30,
+    "percent": 5,
+    "type": "project",
+    "collapsed": false
+  },
+  {
+    "id": 9,
+    "label": "OnBoarding 2",
+    "user": 3,
+    "start": "2019-10-02",
+    "duration": 30,
+    "percent": 5,
+    "type": "project",
+    "collapsed": false,
+    "dependentOn": [8]
+  }
+]
