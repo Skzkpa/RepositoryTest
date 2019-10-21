@@ -1,15 +1,17 @@
 <template>
-    <q-page class="q-pa-sm">
-        <gantt-elastic
-                :options="options"
-                :tasks="tasks"
-                @tasks-changed="tasksUpdate"
-                @options-changed="optionsUpdate"
-                @dynamic-style-changed="styleUpdate"
-        >
-            <gantt-header slot="header" :options="options">RR: Infra</gantt-header>
-        </gantt-elastic>
-    </q-page>
+    <div class="about">
+        <div class="content">
+            <gantt-elastic
+                    :options="options"
+                    :tasks="tasks"
+                    @tasks-changed="tasksUpdate"
+                    @options-changed="optionsUpdate"
+                    @dynamic-style-changed="styleUpdate"
+            >
+                <gantt-header slot="header" :options="options">CDS: Infra</gantt-header>
+            </gantt-elastic>
+        </div>
+    </div>
 </template>
 
 <style>
@@ -21,22 +23,6 @@
     import dayjs from "dayjs";
     import tasks from "../data/tasks.yaml"
 
-    function getDate(days) {
-        const currentDate = new Date();
-        const currentYear = currentDate.getFullYear();
-        const currentMonth = currentDate.getMonth();
-        const currentDay = currentDate.getDate();
-        const timeStamp = new Date(
-            currentYear,
-            currentMonth,
-            currentDay,
-            0,
-            0,
-            0
-        ).getTime();
-        return new Date(timeStamp + days * 60 * 60 * 1000 * 24).getTime();
-    }
-
     for (let task of tasks) {
         task.duration = task.duration * 24 * 3600 * 1000;
     }
@@ -47,9 +33,9 @@
             progress: "percent"
         },
         maxRows: 100,
-        maxHeight: 500,
+        // maxHeight: 500,
         title: {
-            label: "RR: Infra",
+            label: "CDS: Infra",
             html: false
         },
         row: {
@@ -97,15 +83,15 @@
                     id: 3,
                     label: "Story Points",
                     value: "story_points",
-                    width: 130,
+                    width: 30,
                     html: true
                 },
-                {
-                    id: 3,
-                    label: "Start",
-                    value: task => dayjs(task.start).format("YYYY-MM-DD"),
-                    width: 78
-                },
+                // {
+                //     id: 3,
+                //     label: "Start",
+                //     value: task => dayjs(task.start).format("YYYY-MM-DD"),
+                //     width: 78
+                // },
                 {
                     id: 4,
                     label: "Team",
@@ -156,19 +142,6 @@
             };
         },
         methods: {
-            addTask() {
-                this.tasks.push({
-                    id: this.lastId++,
-                    label:
-                        '<a href="https://images.pexels.com/photos/423364/pexels-photo-423364.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" target="_blank" style="color:#0077c0;">Yeaahh! you have added a task bro!</a>',
-                    user:
-                        '<a href="https://images.pexels.com/photos/423364/pexels-photo-423364.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" target="_blank" style="color:#0077c0;">Awesome!</a>',
-                    start: getDate(24 * 3),
-                    duration: 1 * 24 * 60 * 60 * 1000,
-                    percent: 50,
-                    type: "project"
-                });
-            },
             tasksUpdate(tasks) {
                 this.tasks = tasks;
             },

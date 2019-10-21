@@ -1,14 +1,12 @@
 <template>
-    <q-layout>
-        <q-page-container>
-            <router-view/>
-        </q-page-container>
-    </q-layout>
+    <div id="app">
+        <router-view/>
+    </div>
 </template>
 
 <script>
     export default {
-        name: "LayoutDefault",
+        name: "app",
         data() {
             return {
                 leftDrawerOpen: false
