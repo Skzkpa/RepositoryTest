@@ -1,10 +1,10 @@
 module.exports = {
-  pluginOptions: {
-    quasar: {
-      treeShake: true
-    }
-  },
-  transpileDependencies: [
-    /[\\\/]node_modules[\\\/]quasar[\\\/]/
-  ]
+    pluginOptions: {
+        quasar: {
+            treeShake: true
+        }
+    },
+    transpileDependencies: [
+        /[\\\/]node_modules[\\\/]quasar[\\\/]/
+    ]
 }

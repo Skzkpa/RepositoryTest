@@ -19,8 +19,7 @@
     import GanttElastic from "gantt-elastic";
     import GanttHeader from "gantt-elastic-header";
     import dayjs from "dayjs";
-    import tasks from "../data/tasks.json"
-    import rtasks from "../data/repetable_tasks.json"
+    import tasks from "../data/tasks.yaml"
 
     function getDate(days) {
         const currentDate = new Date();
@@ -38,32 +37,10 @@
         return new Date(timeStamp + days * 60 * 60 * 1000 * 24).getTime();
     }
 
-    function addDays(date, days) {
-        var result = new Date(date);
-        result.setDate(result.getDate() + days);
-        return result;
-    }
-
     for (let task of tasks) {
         task.duration = task.duration * 24 * 3600 * 1000;
     }
 
-    for (let rtask of rtasks) {
-        let duration = rtask.duration;
-        rtask.duration = 0;
-        tasks.push(rtask);
-        rtask.duration = duration;
-        for (let i = 0, len = rtask.repeats + 0, tid = rtask.id; i < len; i++) {
-            // let atask = JSON.parse(JSON.stringify(rtask));
-            let atask = Object.assign({}, rtask);
-            atask.id = atask.id + i + 1;
-            atask.type = "task";
-            atask.start = addDays(atask.start, 14 * i);
-            atask.parentId = tid;
-            atask.duration = atask.duration * 24 * 3600 * 1000;
-            tasks.push(atask);
-        }
-    }
 
     let options = {
         taskMapping: {
@@ -79,6 +56,7 @@
             height: 24
         },
         calendar: {
+            workingDays: [1, 2, 3, 4, 5],
             hour: {
                 display: false
             }
@@ -104,7 +82,7 @@
                 // },
                 {
                     id: 2,
-                    label: "Description",
+                    label: "Title",
                     value: "label",
                     width: 300,
                     expander: true,
@@ -117,8 +95,8 @@
                 },
                 {
                     id: 3,
-                    label: "FTEs",
-                    value: "user",
+                    label: "Story Points",
+                    value: "story_points",
                     width: 130,
                     html: true
                 },
@@ -130,8 +108,8 @@
                 },
                 {
                     id: 4,
-                    label: "Type",
-                    value: "type",
+                    label: "Team",
+                    value: "team",
                     width: 68
                 },
                 {

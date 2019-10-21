@@ -14,6 +14,7 @@
     "gantt-elastic-header": "^0.1.11",
     "quasar": "^1.0.0-beta.23",
     "vue": "^2.6.10",
+    "vue-cli-plugin-yaml": "^1.0.1",
     "vue-router": "^3.0.6"
   },
   "devDependencies": {
@@ -28,7 +29,8 @@
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
     "vue-cli-plugin-quasar": "^1.0.0-beta.1",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.10",
+    "yamlify": "^0.2.0"
   },
   "eslintConfig": {
     "root": true,

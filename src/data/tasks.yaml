@@ -1,0 +1,429 @@
+- collapsed: false
+  duration: 7
+  id: 0
+  label: Integration of SORTT SFTP Uploader into Release Pipeline
+  percent: 20
+  start: '2019-10-02'
+  story_points: '8'
+  style:
+    base:
+      fill: '#8E44AD'
+      stroke: '#7E349D'
+  team: monkeys
+  type: project
+  user: 2
+- collapsed: false
+  duration: 25
+  id: 1
+  label: '[Automation]: Terraform network adjustments'
+  percent: 20
+  start: '2019-10-05'
+  story_points: '30'
+  style:
+    base:
+      fill: '#8E44AD'
+      stroke: '#7E349D'
+  team: monkeys
+  type: project
+  user: 2
+- collapsed: false
+  duration: 3
+  id: 2
+  label: DA adjustments
+  percent: 100
+  start: '2019-10-17'
+  story_points: '3'
+  style:
+    base:
+      fill: '#8E44AD'
+      stroke: '#7E349D'
+  team: monkeys
+  type: project
+  user: 2
+- collapsed: false
+  duration: 7
+  id: 3
+  label: Update "Continuous Integration & Delivery" LLD
+  percent: 0
+  start: '2019-10-18'
+  story_points: '8'
+  style:
+    base:
+      fill: '#8E44AD'
+      stroke: '#7E349D'
+  team: monkeys
+  type: project
+  user: 2
+- collapsed: false
+  duration: 5
+  id: 4
+  label: '[Automation] Tableau pipeline adjustments for automation'
+  percent: 0
+  start: '2019-10-21'
+  story_points: '5'
+  style:
+    base:
+      fill: '#8E44AD'
+      stroke: '#7E349D'
+  team: monkeys
+  type: project
+  user: 2
+- collapsed: false
+  duration: 11
+  id: 5
+  label: EPS Adjustments
+  percent: 0
+  start: '2019-10-23'
+  story_points: '13'
+  style:
+    base:
+      fill: '#8E44AD'
+      stroke: '#7E349D'
+  team: monkeys
+  type: project
+  user: 2
+- collapsed: false
+  duration: 25
+  id: 6
+  label: 'Automation of provisioning subscriptions: Config Adjustments (read/write),
+    configuration design'
+  percent: 0
+  start: '2019-10-28'
+  story_points: '30'
+  style:
+    base:
+      fill: '#8E44AD'
+      stroke: '#7E349D'
+  team: monkeys
+  type: project
+  user: 2
+- collapsed: false
+  duration: 28
+  id: 7
+  label: Release 1.2 support
+  percent: 20
+  start: '2019-10-16'
+  story_points: '8'
+  style:
+    base:
+      fill: '#8E44AD'
+      stroke: '#7E349D'
+  team: monkeys
+  type: project
+  user: 2
+- collapsed: false
+  duration: 14
+  id: 8
+  label: Release Pipeline Support - IP10.2 - Monkeys
+  percent: 20
+  start: '2019-10-16'
+  story_points: '7'
+  style:
+    base:
+      fill: '#8E44AD'
+      stroke: '#7E349D'
+  team: monkeys
+  type: project
+  user: 2
+- collapsed: false
+  duration: 14
+  id: 9
+  label: Release Pipeline Support - IP10.3 - Monkeys
+  percent: 20
+  start: '2019-10-30'
+  story_points: '7'
+  style:
+    base:
+      fill: '#8E44AD'
+      stroke: '#7E349D'
+  team: monkeys
+  type: project
+  user: 2
+- collapsed: false
+  duration: 14
+  id: 10
+  label: Release Pipeline Support - IP10.4 - Monkeys
+  percent: 20
+  start: '2019-11-13'
+  story_points: '7'
+  style:
+    base:
+      fill: '#8E44AD'
+      stroke: '#7E349D'
+  team: monkeys
+  type: project
+  user: 2
+- collapsed: false
+  duration: 14
+  id: 11
+  label: Release Pipeline Support - IP11.1 - Monkeys
+  percent: 20
+  start: '2019-11-27'
+  story_points: '7'
+  style:
+    base:
+      fill: '#8E44AD'
+      stroke: '#7E349D'
+  team: monkeys
+  type: project
+  user: 2
+- collapsed: false
+  duration: 14
+  id: 12
+  label: Release Pipeline Support - IP11.2 - Monkeys
+  percent: 20
+  start: '2019-12-11'
+  story_points: '7'
+  style:
+    base:
+      fill: '#8E44AD'
+      stroke: '#7E349D'
+  team: monkeys
+  type: project
+  user: 2
+- collapsed: false
+  duration: 33
+  id: 13
+  label: Migrate to feature branch delivery
+  percent: 20
+  start: '2019-10-02'
+  story_points: '40'
+  style:
+    base:
+      fill: '#0287D0'
+      stroke: '#0077C0'
+  team: apes
+  type: project
+  user: 2
+- collapsed: false
+  duration: 11
+  id: 14
+  label: Splitting App service plan
+  percent: 20
+  start: '2019-10-18'
+  story_points: '13'
+  style:
+    base:
+      fill: '#0287D0'
+      stroke: '#0077C0'
+  team: apes
+  type: project
+  user: 2
+- collapsed: false
+  duration: 1
+  id: 15
+  label: Shared Services Integration [NotEstimated]
+  percent: 0
+  start: '2019-10-23'
+  story_points: '0'
+  team: apes
+  type: project
+  user: 2
+- collapsed: false
+  duration: 25
+  id: 16
+  label: Security compliance IP10-IP11.2
+  percent: 0
+  start: '2019-10-23'
+  story_points: '30'
+  style:
+    base:
+      fill: '#0287D0'
+      stroke: '#0077C0'
+  team: apes
+  type: project
+  user: 2
+- collapsed: false
+  duration: 30
+  id: 17
+  label: 'Pentest adjustments '
+  percent: 0
+  start: '2019-11-04'
+  story_points: '36'
+  style:
+    base:
+      fill: '#0287D0'
+      stroke: '#0077C0'
+  team: apes
+  type: project
+  user: 2
+- collapsed: false
+  duration: 30
+  id: 18
+  label: DR adjustments and support
+  percent: 20
+  start: '2019-11-19'
+  story_points: '36'
+  style:
+    base:
+      fill: '#0287D0'
+      stroke: '#0077C0'
+  team: apes
+  type: project
+  user: 2
+- collapsed: false
+  duration: 17
+  id: 19
+  label: Relation based deployment
+  percent: 20
+  start: '2019-12-04'
+  story_points: '20'
+  style:
+    base:
+      fill: '#0287D0'
+      stroke: '#0077C0'
+  team: apes
+  type: project
+  user: 2
+- collapsed: false
+  duration: 14
+  id: 20
+  label: Release Pipeline Support - IP10.2 - Apes
+  percent: 20
+  start: '2019-10-16'
+  story_points: '8'
+  style:
+    base:
+      fill: '#0287D0'
+      stroke: '#0077C0'
+  team: apes
+  type: project
+  user: 2
+- collapsed: false
+  duration: 14
+  id: 21
+  label: Release Pipeline Support - IP10.3 - Apes
+  percent: 20
+  start: '2019-10-30'
+  story_points: '8'
+  style:
+    base:
+      fill: '#0287D0'
+      stroke: '#0077C0'
+  team: apes
+  type: project
+  user: 2
+- collapsed: false
+  duration: 14
+  id: 22
+  label: Release Pipeline Support - IP10.4 - Apes
+  percent: 20
+  start: '2019-11-13'
+  story_points: '8'
+  style:
+    base:
+      fill: '#0287D0'
+      stroke: '#0077C0'
+  team: apes
+  type: project
+  user: 2
+- collapsed: false
+  duration: 14
+  id: 23
+  label: Release Pipeline Support - IP11.1 - Apes
+  percent: 20
+  start: '2019-11-27'
+  story_points: '8'
+  style:
+    base:
+      fill: '#0287D0'
+      stroke: '#0077C0'
+  team: apes
+  type: project
+  user: 2
+- collapsed: false
+  duration: 14
+  id: 24
+  label: Release Pipeline Support - IP11.2 - Apes
+  percent: 20
+  start: '2019-12-11'
+  story_points: '8'
+  style:
+    base:
+      fill: '#0287D0'
+      stroke: '#0077C0'
+  team: apes
+  type: project
+  user: 2
+- collapsed: false
+  duration: 1
+  id: 25
+  label: 'F223: Complete Message Provenance - Extend Message Catalogue to Include
+    External Packages in DPF'
+  percent: 100
+  start: '2019-10-02'
+  story_points: '0'
+  style:
+    base:
+      fill: '#1EBC61'
+      stroke: '#0EAC51'
+  team: apes&monkeys
+  type: project
+  user: 2
+- collapsed: false
+  duration: 2
+  id: 26
+  label: 'F075f: Azure Event Hub and Blob Connector '
+  percent: 100
+  start: '2019-10-02'
+  story_points: ''
+  style:
+    base:
+      fill: '#1EBC61'
+      stroke: '#0EAC51'
+  team: apes&monkeys
+  type: project
+  user: 2
+- collapsed: false
+  duration: 1
+  id: 27
+  label: '{F143 [SUF File Generation] - API to access Fleet Store'
+  percent: 100
+  start: '2019-10-03'
+  story_points: '0'
+  style:
+    base:
+      fill: '#1EBC61'
+      stroke: '#0EAC51'
+  team: apes&monkeys
+  type: project
+  user: 2
+- collapsed: false
+  duration: 1
+  id: 28
+  label: '{F274} CDA - Add EEC software version to the config schema identification'
+  percent: 100
+  start: '2019-10-03'
+  story_points: '0'
+  style:
+    base:
+      fill: '#1EBC61'
+      stroke: '#0EAC51'
+  team: apes&monkeys
+  type: project
+  user: 2
+- collapsed: false
+  duration: 40
+  id: 29
+  label: Documentation LLD etc. [BLOCKED]
+  percent: 0
+  start: '2019-10-30'
+  story_points: '80'
+  team: apes&monkeys
+  type: project
+  user: 2
+- collapsed: false
+  duration: 14
+  id: 30
+  label: Release Pipeline Support - IP10.1
+  percent: 100
+  start: '2019-10-2'
+  story_points: '13'
+  style:
+    base:
+      fill: '#1EBC61'
+      stroke: '#0EAC51'
+  team: apes&monkeys
+  type: project
+  user: 2
+
