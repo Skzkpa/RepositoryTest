@@ -1,6 +1,11 @@
 # gfi-vue-gantt-elastic
 
-## Project setup
+## Requirements:
+- npm 6.9.0
+- python3.5+
+
+## Project setup - JS
+Run in 
 ```
 npm install
 ```
@@ -25,5 +30,9 @@ npm run test
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Building a task list.
+
+1. Open excel file in ./src/data/base_excel_file.xlsx 
+2. Add relevant information, it is fine to leave empty lines but all fields are expected.
+3. Copy the content of excel file except the header row
+4. Open ./src/data/excel_to_yaml.py 

@@ -75,7 +75,10 @@
                     html: true,
                     events: { // eslint-disable-next-line
                         click({data, column}) {
-                            alert("description clicked!\n" + data.label);
+                            let url = "https://productfactory.visualstudio.com/Future%20EHM%20Platform/_workitems/edit/";
+                            url += data.ticket;
+                            window.open(url);
+                            // alert("description clicked!\n" + data.label);
                         }
                     }
                 },

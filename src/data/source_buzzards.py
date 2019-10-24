@@ -100,13 +100,14 @@ def process(data, global_days_lengh=0, start=None):
             "label": atitle,
             "user": 2,
             "team": team,
+            "ticket": ticket,
             "start": str(cdate),
             "duration": days_lengh,
             "story_points": story_points,
+            "status": status,
             "percent": percent.get(status, 0),
             "type": "project",
-            "collapsed": False,
-            "style": deepcopy(styles.get(team.lower() if team else "apes&monkeys"))
+            "style": deepcopy(styles.get(status, styles.get(team.lower() if team else "apes&monkeys")))
         }
         all_data[team].append(base)
 
