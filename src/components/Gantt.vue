@@ -60,25 +60,24 @@
                 straight: false
             },
             columns: [
-                // {
-                //     id: 1,
-                //     label: "ID",
-                //     value: "id",
-                //     width: 40
-                // },
+                {
+                    id: 1,
+                    label: "ID",
+                    value: "id",
+                    width: 65
+                },
                 {
                     id: 2,
                     label: "Title",
-                    value: "label",
+                    value: "title",
                     width: 300,
                     expander: true,
                     html: true,
                     events: { // eslint-disable-next-line
                         click({data, column}) {
                             let url = "https://productfactory.visualstudio.com/Future%20EHM%20Platform/_workitems/edit/";
-                            url += data.ticket;
+                            url += data.id;
                             window.open(url);
-                            // alert("description clicked!\n" + data.label);
                         }
                     }
                 },
