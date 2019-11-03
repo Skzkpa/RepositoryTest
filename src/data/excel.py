@@ -21,7 +21,7 @@ def process_worksheet(ws):
 
 def process_excel_file(file):
     wb = openpyxl.load_workbook(file)
-
+    cfg = {x['area']: x['velocity'] for x in process_worksheet(wb.get_sheet_by_name('teams'))}
     for ws in wb.worksheets:
         area = ws.title.lower()
         if area.startswith('arkusz') or area.startswith('sheet') or area.startswith('common'):
@@ -32,7 +32,7 @@ def process_excel_file(file):
         if area == "teams":
             output = dump(data_set)
         else:
-            output = process(data_set, velocity)
+            output = process(data_set, cfg.get('velocity', 1))
         save_yaml_file(output, area)
 
 

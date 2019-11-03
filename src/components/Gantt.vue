@@ -8,7 +8,7 @@
                     @options-changed="optionsUpdate"
                     @dynamic-style-changed="styleUpdate"
             >
-                <gantt-header slot="header" :options="options">CDS: Infra</gantt-header>
+                <gantt-header slot="header" :options="options">CDS: {{ area.area }}</gantt-header>
             </gantt-elastic>
         </div>
     </div>
@@ -20,12 +20,7 @@
 <script>
     import GanttElastic from "gantt-elastic";
     import GanttHeader from "gantt-elastic-header";
-    import dayjs from "dayjs";
-    import tasks from "../data/tasks.yaml"
-
-    for (let task of tasks) {
-        task.duration = task.duration * 24 * 3600 * 1000;
-    }
+    // import dayjs from "dayjs";
 
 
     let options = {
@@ -34,12 +29,8 @@
         },
         maxRows: 100,
         // maxHeight: 500,
-        title: {
-            label: "CDS: Infra",
-            html: false
-        },
         row: {
-            height: 24
+            height: 16
         },
         calendar: {
             workingDays: [1, 2, 3, 4, 5],
@@ -136,12 +127,26 @@
             GanttHeader
         },
         data() {
+            options.title = {
+                label: "CDS: " + this.area,
+                html: false
+            }
             return {
-                tasks,
                 options,
                 dynamicStyle: {},
                 lastId: 16
             };
+        },
+
+        props: {
+            area: {
+                type: Object,
+                required: true
+            },
+            tasks: {
+                type: Array,
+                required: true
+            },
         },
         methods: {
             tasksUpdate(tasks) {

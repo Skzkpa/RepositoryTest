@@ -60,9 +60,10 @@ def process(data, velocity=10, global_days_lengh=0, start=None):
             days_to_add = days_lengh
         cdate = current_date
         current_date = add_days_skipping_weekends(current_date, days_to_add)
+        dl = days_lengh if days_lengh > 0 else 1
         line.update({
             "start": str(cdate),
-            "duration": days_lengh if days_lengh > 0 else 1,
+            "duration":  dl * 24 * 3600 * 1000,
             "percent": percent.get(status, 0),
             "type": "project",
         })

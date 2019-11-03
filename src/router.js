@@ -1,4 +1,4 @@
-import Gantt from './components/Gantt.vue';
+import Home from './components/Home.vue';
 import Vue from 'vue'
 import Router from 'vue-router'
 
@@ -9,7 +9,7 @@ export default new Router({
     routes: [
         {
             path: '/',
-            component: Gantt
+            component: Home
         }
     ]
 });
