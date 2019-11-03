@@ -3,11 +3,11 @@
 </template>
 
 <script>
-    import Gantt from './Gantt.vue';
-    import tasks from "../data/bi.yaml"
+    import Gantt from '../_base/gantt.vue';
+    import tasks from "../../data/tasks/sm.yaml"
 
     export default {
-        name: "bi",
+        name: "sm",
         components: {
             Gantt
         },
@@ -22,5 +22,6 @@
                 required: true
             }
         }
+
     }
 </script>

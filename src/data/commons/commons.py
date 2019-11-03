@@ -43,7 +43,7 @@ def dump(data):
 
 
 def save_yaml_file(data, file_name):
-    with open("{}.yaml".format(file_name), 'w') as file:
+    with open("./tasks/{}.yaml".format(file_name), 'w') as file:
         file.write(data)
 
 

@@ -3,8 +3,8 @@
 </template>
 
 <script>
-    import Gantt from './Gantt.vue';
-    import tasks from "../data/integration.yaml"
+    import Gantt from '../_base/gantt.vue';
+    import tasks from "../../data/tasks/integration.yaml"
 
     export default {
         name: "integration",

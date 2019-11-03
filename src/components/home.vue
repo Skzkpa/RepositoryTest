@@ -9,10 +9,10 @@
 
 <script>
     import areas from "../data/teams.yaml"
-    import infrastructure from './infrastructure'
-    import bi from './bi'
-    import sm from './sm'
-    import integration from './integration'
+    import infrastructure from './teams/infrastructure'
+    import bi from './teams/bi'
+    import sm from './teams/sm'
+    import integration from './teams/integration'
 
     export default {
         name: "Home",

@@ -3,17 +3,16 @@
 </template>
 
 <script>
-    import Gantt from './Gantt.vue';
-    import tasks from "../data/infrastructure.yaml"
+    import Gantt from '../_base/gantt.vue';
+    import tasks from "../../data/tasks/bi.yaml"
 
     export default {
-        name: "infrastructure",
+        name: "bi",
         components: {
             Gantt
         },
-        data(){
+        data() {
             return {
-                name: "infrastructure",
                 tasks
             }
         },
