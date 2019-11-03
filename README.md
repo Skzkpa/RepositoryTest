@@ -1,8 +1,40 @@
-# gfi-vue-gantt-elastic
+## gfi-vue-gantt-elastic
+
+
+## Building a task list.
+
+0. Run relevant query in VSTS with columns:
+    * ID	Title	Status	Tags	Story Points
+    * supported Tags:
+        * Milestone X ex. Milestone C
+        * Sprint X  ex. Sprint 2  
+        * PIXY    ex. PI10
+1. Open excel file in ./src/data/excel.xlsx 
+2. Add relevant information for your team in relevant sheet and update your velocity and date in `teams` sheet, it is fine to leave empty lines but all fields are expected.
+    * Custom fields for Gantt are in red
+3. \* Run the script:
+    ```
+    python excel_to_yaml.py 
+    ```
+4. \* You can also run the development server with `npm run serve` to check if the outcome of You work is as expected.
+5. Add all files to git with
+    ```
+    git add *
+    git commit -m "updates data for infra"
+    git push
+    ``` 
+
+\* Steps 3,4 are optional, this will allow you to check the outcome of your changes, but it requires full project setup.
+
 
 ## Requirements:
+Mandatory:
+- git
+
+Optional:
 - npm 6.9.0
 - python3.5+
+
 
 ## Project setup - JS
 Run in 
@@ -10,50 +42,35 @@ Run in
 npm install
 ```
 
-### Compiles and hot-reloads for development
+#### Compiles and hot-reloads for development
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+#### Compiles and minifies for production
 ```
 npm run build
 ```
 
-### Run your tests
+#### Run your tests
 ```
 npm run test
 ```
 
-### Lints and fixes files
+#### Lints and fixes files
 ```
 npm run lint
 ```
 
 ## Project setup - Python
-### Install Python dependencies
+#### Install Python dependencies
 ```
 pip install -r ./src/data/requirements
 ```
-### Run your tests
+#### Run your tests
 There is a simple test writen in ./src/data/commons/tests.py
 ```
 python tests.py
 ```
 
-
-## Building a task list.
-
-1. Open excel file in ./src/data/base_excel_file.xlsx 
-2. Add relevant information, it is fine to leave empty lines but all fields are expected.
-3. Copy the content of excel file except the header row
-4. Open ./src/data/excel_to_yaml.py 
-5. Past data to marked place from excel.
-6. Fill the velocity.
-7. Run the script:
-```
-python excel_to_yaml.py 
-```
-8. Replace the content of ./src/data/tasks.yaml with the outcome of above script. 
-9. Now You can adjust the Yaml directly.
-10. You can also run the development server with `npm run serve` to check if the outcome of You work is as expected.
+ 

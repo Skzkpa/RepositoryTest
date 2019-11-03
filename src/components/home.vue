@@ -8,7 +8,7 @@
 </template>
 
 <script>
-    import areas from "../data/teams.yaml"
+    import areas from "../data/tasks/teams.yaml"
     import infrastructure from './teams/infrastructure'
     import bi from './teams/bi'
     import sm from './teams/sm'

@@ -106,6 +106,13 @@
                             width: "100%"
                         }
                     }
+                },
+                {
+                    id: 6,
+                    label: "Milestone",
+                    value: "Milestone",
+                    width: 30,
+                    html: true
                 }
             ]
         },

@@ -1,0 +1,15 @@
+- area: infrastructure
+  last_update: 2019-10-12 00:00:00
+  velocity: 20
+- area: bi
+  last_update: 2019-10-12 00:00:00
+  velocity: 50
+- area: sm
+  last_update: 2019-10-12 00:00:00
+  velocity: 50
+- area: integration
+  last_update: 2019-10-12 00:00:00
+  velocity: 70
+- area: epsui
+  last_update: 2019-10-12 00:00:00
+  velocity: 23

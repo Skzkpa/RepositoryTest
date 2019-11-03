@@ -1,0 +1,365 @@
+- duration: 172800000
+  id: 134672
+  milestone: C
+  percent: 20
+  start: '2019-10-18'
+  status: Active
+  story_points: 5
+  style:
+    base:
+      fill: '#8E44AD'
+      stroke: '#7E349D'
+  tags: CSME MVP; Milestone C; Monkeys; NotReady
+  team: monkeys
+  title: '[Automation] Tableau pipeline adjustments for automation'
+  type: project
+- duration: 1296000000
+  id: 127248
+  milestone: C
+  percent: 20
+  pi: 10
+  sprint: 1
+  start: '2019-10-17'
+  status: Active
+  story_points: 30
+  style:
+    base:
+      fill: '#8E44AD'
+      stroke: '#7E349D'
+  tags: CB_APPROVED; CSME MVP; Milestone C; Monkeys; PI10; sprint 1
+  team: monkeys
+  title: '[Automation]: Terraform network adjustments'
+  type: project
+- duration: 1296000000
+  id: 126794
+  milestone: C
+  percent: 20
+  start: '2019-11-02'
+  status: Active
+  story_points: 30
+  style:
+    base:
+      fill: '#8E44AD'
+      stroke: '#7E349D'
+  tags: CB_APPROVED; CSME MVP; Milestone C; Monkeys
+  team: monkeys
+  title: 'Automation of provisioning subscriptions: Config Adjustments (read/write),
+    configuration design'
+  type: project
+- duration: 172800000
+  id: 135451
+  milestone: C
+  percent: 20
+  pi: 10
+  sprint: 2
+  start: '2019-11-04'
+  status: Active
+  story_points: 5
+  style:
+    base:
+      fill: '#8E44AD'
+      stroke: '#7E349D'
+  tags: CSME MVP; Milestone C; Monkeys; PI10; sprint 2
+  team: monkeys
+  title: DA adjustments - part 2
+  type: project
+- duration: 7776000000
+  id: 136595
+  milestone: F
+  percent: 20
+  start: 2019-10-02 00:00:00
+  status: Active
+  story_points: 36
+  style:
+    base:
+      fill: '#8E44AD'
+      stroke: '#7E349D'
+  tags: Apes; Milestone F
+  team: apes
+  title: Disaster Recovery Support and Integration
+  type: project
+- duration: 86400000
+  id: 135804
+  milestone: C
+  percent: 0
+  start: '2019-11-05'
+  status: New
+  style:
+    base:
+      fill: '#0287D0'
+      stroke: '#0077C0'
+  tags: CSME MVP; Milestone C; Monkeys; Performance
+  team: monkeys
+  title: EPS Adjustments
+  type: project
+- duration: 345600000
+  id: 106727
+  milestone: C
+  percent: 20
+  pi: 10
+  sprint: 2
+  start: '2019-11-09'
+  status: Active
+  story_points: 8
+  style:
+    base:
+      fill: '#8E44AD'
+      stroke: '#7E349D'
+  tags: CLE MVP; Milestone C; Monkeys; Pearl 15 Continuous; PI10; sprint 2
+  team: monkeys
+  title: Integration of SORTT SFTP Uploader into Release Pipeline
+  type: project
+- duration: 777600000
+  id: 137200
+  milestone: C
+  percent: 0
+  pi: 10
+  sprint: 1
+  start: '2019-10-11'
+  status: New
+  story_points: 18
+  style:
+    base:
+      fill: '#0287D0'
+      stroke: '#0077C0'
+  tags: Apes; Blocked; CSME MVP; Milestone C; PI10; sprint 1; Waiting for POC
+  team: apes
+  title: Migrate to feature branch delivery
+  type: project
+- duration: 86400000
+  id: 136603
+  milestone: C
+  percent: 0
+  start: '2019-10-17'
+  status: New
+  story_points: 2
+  style:
+    base:
+      fill: '#0287D0'
+      stroke: '#0077C0'
+  tags: Apes; Blocked; Milestone C; NothingToDoHere?
+  team: apes
+  title: PenTesting security adjustments
+  type: project
+- duration: 345600000
+  id: 135450
+  milestone: C
+  percent: 0
+  pi: 10
+  sprint: 1
+  start: '2019-10-15'
+  status: New
+  story_points: 8
+  style:
+    base:
+      fill: '#0287D0'
+      stroke: '#0077C0'
+  tags: Apes; CSME MVP; Milestone C; PI10; sprint 1
+  team: apes
+  title: Relation based deployment
+  type: project
+- duration: 1728000000
+  id: 136564
+  milestone: C
+  percent: 20
+  start: '2019-11-29'
+  status: Active
+  story_points: 13
+  style:
+    base:
+      fill: '#8E44AD'
+      stroke: '#7E349D'
+  tags: Milestone C; Monkeys
+  team: monkeys
+  title: Release 1.2 support
+  type: project
+- duration: 172800000
+  id: 137198
+  milestone: C
+  percent: 100
+  pi: 10
+  start: '2019-10-19'
+  status: Closed
+  story_points: 4
+  style:
+    base:
+      fill: '#1EBC61'
+      stroke: '#0EAC51'
+  tags: Apes; CSME MVP; Milestone C; PI10
+  team: apes
+  title: Release in YAML PoC
+  type: project
+- duration: 86400000
+  id: 138286
+  milestone: C
+  percent: 20
+  pi: 10
+  start: '2019-10-20'
+  status: Active
+  story_points: 1
+  style:
+    base:
+      fill: '#8E44AD'
+      stroke: '#7E349D'
+  tags: Apes; CSME MVP; Milestone C; PI10
+  team: apes
+  title: Release in YAML PoC - part 2
+  type: project
+- duration: 1209600000
+  id: 137195
+  milestone: C
+  percent: 100
+  pi: 10
+  sprint: 2
+  start: 2019-10-16 00:00:00
+  status: Closed
+  story_points: 7
+  style:
+    base:
+      fill: '#1EBC61'
+      stroke: '#0EAC51'
+  tags: Apes; CSME MVP; Milestone C; PI10; sprint 2
+  team: apes
+  title: Release Pipeline Support - Sprint 10.2 - Team Buzzard-Apes
+  type: project
+- duration: 1209600000
+  id: 137056
+  milestone: C
+  percent: 100
+  pi: 10
+  sprint: 2
+  start: 2019-10-16 00:00:00
+  status: Closed
+  story_points: 8
+  style:
+    base:
+      fill: '#1EBC61'
+      stroke: '#0EAC51'
+  tags: Milestone C; Monkeys; PI10; sprint 2
+  team: monkeys
+  title: Release Pipeline Support - Sprint 10.2 - Team Buzzard-Monkeys
+  type: project
+- duration: 1209600000
+  id: 138199
+  milestone: C
+  percent: 20
+  pi: 10
+  sprint: 3
+  start: 2019-10-30 00:00:00
+  status: Active
+  style:
+    base:
+      fill: '#8E44AD'
+      stroke: '#7E349D'
+  tags: Apes; CSME MVP; Milestone C; PI10; sprint 3
+  team: apes
+  title: Release Pipeline Support - Sprint 10.3 - Team Buzzard-Apes
+  type: project
+- duration: 1209600000
+  id: 138195
+  milestone: C
+  percent: 0
+  pi: 10
+  sprint: 3
+  start: 2019-10-30 00:00:00
+  status: New
+  style:
+    base:
+      fill: '#0287D0'
+      stroke: '#0077C0'
+  tags: Milestone C; Monkeys; PI10; sprint 3
+  team: monkeys
+  title: Release Pipeline Support - Sprint 10.3 - Team Buzzard-Monkeys
+  type: project
+- duration: 1209600000
+  id: 137199
+  milestone: C
+  percent: 100
+  pi: 10
+  sprint: 2
+  start: '2019-11-03'
+  status: Closed
+  story_points: 11
+  style:
+    base:
+      fill: '#1EBC61'
+      stroke: '#0EAC51'
+  tags: Apes; CSME MVP; Milestone C; PI10; Rework; sprint 2
+  team: apes
+  title: Security Compliance SP 10.2
+  type: project
+- duration: 1209600000
+  id: 138288
+  milestone: C
+  percent: 20
+  pi: 10
+  sprint: 3
+  start: '2019-11-13'
+  status: Active
+  style:
+    base:
+      fill: '#8E44AD'
+      stroke: '#7E349D'
+  tags: Apes; CSME MVP; Milestone C; PI10; Rework; sprint 3
+  team: apes
+  title: Security Compliance SP 10.3
+  type: project
+- duration: 86400000
+  id: 136604
+  milestone: C
+  percent: 0
+  start: '2019-11-04'
+  status: New
+  style:
+    base:
+      fill: '#0287D0'
+      stroke: '#0077C0'
+  tags: Apes; Blocked; Milestone C; WaitingForFaisal
+  team: apes
+  title: Shared Services integration and lockdown Automation
+  type: project
+- duration: 518400000
+  id: 136171
+  milestone: C
+  percent: 100
+  pi: 10
+  start: '2019-11-10'
+  status: Closed
+  story_points: 11
+  style:
+    base:
+      fill: '#1EBC61'
+      stroke: '#0EAC51'
+  tags: Apes; CSME MVP; Milestone C; PI10; Waiting for MS discussion
+  team: apes
+  title: Splitting App service plan
+  type: project
+- duration: 86400000
+  id: 138221
+  milestone: C
+  percent: 20
+  pi: 10
+  start: '2019-11-11'
+  status: Active
+  story_points: 2
+  style:
+    base:
+      fill: '#8E44AD'
+      stroke: '#7E349D'
+  tags: Apes; CSME MVP; Milestone C; PI10; Waiting for MS discussion
+  team: apes
+  title: Splitting App service plan - part 2 after merge
+  type: project
+- duration: 345600000
+  id: 69221
+  percent: 0
+  start: '2019-10-20'
+  status: New
+  story_points: 8
+  style:
+    base:
+      fill: '#0287D0'
+      stroke: '#0077C0'
+  tags: CSME MVP; Fix2
+  title: Update "Continuous Integration & Delivery" LLD
+  type: project

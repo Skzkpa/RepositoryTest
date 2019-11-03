@@ -1,8 +1,6 @@
 import openpyxl
 from commons import dump, process, save_yaml_file
 
-velocity = 30
-
 
 def process_worksheet(ws):
     header = []
@@ -10,11 +8,13 @@ def process_worksheet(ws):
 
     for row in ws.iter_rows(max_row=1):
         for cell in row:
-            header.append(cell.value.lower().replace(' ', '_'))
+            if cell.value:
+                header.append(cell.value.lower().replace(' ', '_'))
     for row in ws.iter_rows(min_row=2):
         data = {}
         for idx, cell in enumerate(row):
-            data[header[idx]] = cell.value
+            if cell.value:
+                data[header[idx]] = cell.value
         data_set.append(data)
     return data_set
 
@@ -32,8 +32,8 @@ def process_excel_file(file):
         if area == "teams":
             output = dump(data_set)
         else:
-            output = process(data_set, cfg.get('velocity', 1))
+            output = process(data_set, cfg.get(area, 1))
         save_yaml_file(output, area)
 
 
-process_excel_file('base_excel_file.xlsx')
+process_excel_file('excel.xlsx')
