@@ -8,7 +8,7 @@
                     @options-changed="optionsUpdate"
                     @dynamic-style-changed="styleUpdate"
             >
-                <gantt-header slot="header" :options="options">CDS: {{ area.area }}</gantt-header>
+                <gantt-header slot="header" :options="options"></gantt-header>
             </gantt-elastic>
         </div>
     </div>
@@ -135,9 +135,16 @@
         },
         data() {
             options.title = {
-                label: "CDS: " + this.area,
-                html: false
-            }
+                label: "<div class=\"field is-grouped is-grouped-multiline\">" +
+                    "<div class=\"control\">" +
+                    " <div class=\"control\">" +
+                    "<div class=\"tags is-small has-addons\"><span class=\"tag is-dark\">Area</span><span class=\"tag is-warning\">" + this.area.area + "</span></div></div>" +
+                    "</div>" +
+                    " <div class=\"control\">" +
+                    "<div class=\"tags is-small has-addons\"><span class=\"tag is-dark\">Velocity</span><span class=\"tag is-info\">" + this.area.velocity + "</span></div></div>" +
+                    " <div class=\"control\"><div class=\"tags is-small has-addons\"><span class=\"tag is-dark\">Updated</span><span class=\"tag is-success\">" + this.area.last_update.slice(0,10)  + "</span></div></div></div></div>",
+                html: true
+            };
             return {
                 options,
                 dynamicStyle: {},
