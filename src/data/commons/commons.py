@@ -1,15 +1,9 @@
-import yaml
+from collections import defaultdict
 from copy import deepcopy
 from datetime import date, timedelta
 
+import yaml
 
-class NestedDict(dict):
-    def __missing__(self, key):
-        self[key] = NestedDict()
-        return self[key]
-
-
-from collections import defaultdict
 
 nested_dict = lambda: defaultdict(nested_dict)
 
@@ -64,10 +58,10 @@ class ProperDate:
         if sprint is None:
             sprint = 2
         alt = self.calculate_pi_start(pi, sprint)
-        cpis = self.dates.get(pi, {}).get(sprint, {}).get(team, alt)
-        cpis = self.add_days_skipping_weekends(cpis, duration)
+        start = self.dates.get(pi, {}).get(sprint, {}).get(team, alt)
+        cpis = self.add_days_skipping_weekends(start, duration)
         self.dates[pi][sprint][team] = cpis
-        return str(cpis)
+        return str(start)
 
 
 def dump(data):
@@ -108,7 +102,6 @@ def process(data, velocity=10):
             tags = line.get('tags').split(';')
             for tag in tags:
                 tag = tag.strip().lower()
-                # print(tag)
                 if tag.startswith('milestone'):
                     line['milestone'] = tag[-1].upper()
                 elif tag.startswith('sprint'):
@@ -128,5 +121,4 @@ def process(data, velocity=10):
                 days_to_add,
                 team=line.get('team')
             )
-        print(line['start'], line.get('milestone'), line.get('pi'), line.get('sprint'))
     return dump(data)

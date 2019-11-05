@@ -2,7 +2,7 @@
   id: 134672
   milestone: C
   percent: 20
-  start: '2019-10-18'
+  start: '2019-10-16'
   status: Active
   story_points: 5
   style:
@@ -19,7 +19,7 @@
   percent: 20
   pi: 10
   sprint: 1
-  start: '2019-10-17'
+  start: '2019-10-02'
   status: Active
   story_points: 30
   style:
@@ -34,7 +34,7 @@
   id: 126794
   milestone: C
   percent: 20
-  start: '2019-11-02'
+  start: '2019-10-18'
   status: Active
   story_points: 30
   style:
@@ -52,7 +52,7 @@
   percent: 20
   pi: 10
   sprint: 2
-  start: '2019-11-04'
+  start: '2019-11-02'
   status: Active
   story_points: 5
   style:
@@ -82,7 +82,7 @@
   id: 135804
   milestone: C
   percent: 0
-  start: '2019-11-05'
+  start: '2019-11-04'
   status: New
   style:
     base:
@@ -98,7 +98,7 @@
   percent: 20
   pi: 10
   sprint: 2
-  start: '2019-11-09'
+  start: '2019-11-05'
   status: Active
   story_points: 8
   style:
@@ -115,7 +115,7 @@
   percent: 0
   pi: 10
   sprint: 1
-  start: '2019-10-11'
+  start: '2019-10-02'
   status: New
   story_points: 18
   style:
@@ -130,7 +130,7 @@
   id: 136603
   milestone: C
   percent: 0
-  start: '2019-10-17'
+  start: '2019-10-16'
   status: New
   story_points: 2
   style:
@@ -147,7 +147,7 @@
   percent: 0
   pi: 10
   sprint: 1
-  start: '2019-10-15'
+  start: '2019-10-11'
   status: New
   story_points: 8
   style:
@@ -162,7 +162,7 @@
   id: 136564
   milestone: C
   percent: 20
-  start: '2019-11-29'
+  start: '2019-11-09'
   status: Active
   story_points: 13
   style:
@@ -178,7 +178,7 @@
   milestone: C
   percent: 100
   pi: 10
-  start: '2019-10-19'
+  start: '2019-10-17'
   status: Closed
   story_points: 4
   style:
@@ -194,7 +194,7 @@
   milestone: C
   percent: 20
   pi: 10
-  start: '2019-10-20'
+  start: '2019-10-19'
   status: Active
   story_points: 1
   style:
@@ -277,7 +277,7 @@
   percent: 100
   pi: 10
   sprint: 2
-  start: '2019-11-03'
+  start: '2019-10-20'
   status: Closed
   story_points: 11
   style:
@@ -294,7 +294,7 @@
   percent: 20
   pi: 10
   sprint: 3
-  start: '2019-11-13'
+  start: '2019-10-30'
   status: Active
   style:
     base:
@@ -308,7 +308,7 @@
   id: 136604
   milestone: C
   percent: 0
-  start: '2019-11-04'
+  start: '2019-11-03'
   status: New
   style:
     base:
@@ -323,7 +323,7 @@
   milestone: C
   percent: 100
   pi: 10
-  start: '2019-11-10'
+  start: '2019-11-04'
   status: Closed
   story_points: 11
   style:
@@ -339,7 +339,7 @@
   milestone: C
   percent: 20
   pi: 10
-  start: '2019-11-11'
+  start: '2019-11-10'
   status: Active
   story_points: 2
   style:
@@ -353,7 +353,7 @@
 - duration: 345600000
   id: 69221
   percent: 0
-  start: '2019-10-20'
+  start: '2019-10-16'
   status: New
   story_points: 8
   style:
