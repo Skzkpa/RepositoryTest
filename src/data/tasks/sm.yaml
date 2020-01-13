@@ -1,7 +1,7 @@
 - duration: 86400000
   id: 135457
   percent: 100
-  start: '2019-10-16'
+  start: '2020-01-08'
   status: Closed
   style:
     base:
@@ -13,7 +13,7 @@
 - duration: 172800000
   id: 137195
   percent: 20
-  start: '2019-10-17'
+  start: '2020-01-09'
   status: Active
   story_points: 8
   style:
@@ -26,7 +26,7 @@
 - duration: 345600000
   id: 132639
   percent: 0
-  start: '2019-10-19'
+  start: '2020-01-11'
   status: Blocked
   story_points: 20
   tags: C

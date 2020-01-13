@@ -1,6 +1,13 @@
+import logging
+import warnings
+
 import openpyxl
 from commons import dump, process, save_yaml_file
 
+
+warnings.filterwarnings("ignore", category=DeprecationWarning)
+warnings.filterwarnings("ignore", category=UserWarning)
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def process_worksheet(ws):
     header = []
@@ -22,6 +29,7 @@ def process_worksheet(ws):
 def process_excel_file(file):
     wb = openpyxl.load_workbook(file)
     cfg = {x['area']: x['velocity'] for x in process_worksheet(wb.get_sheet_by_name('teams'))}
+    logging.info("Config obtained")
     for ws in wb.worksheets:
         area = ws.title.lower()
         if area.startswith('arkusz') or area.startswith('sheet') or area.startswith('common'):
@@ -34,6 +42,10 @@ def process_excel_file(file):
         else:
             output = process(data_set, cfg.get(area, 1))
         save_yaml_file(output, area)
+        logging.info(f"{area} Done")
+
 
 
 process_excel_file('excel.xlsx')
+
+logging.info(f"Finished")

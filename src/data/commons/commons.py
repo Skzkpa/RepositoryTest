@@ -1,6 +1,7 @@
 from collections import defaultdict
 from copy import deepcopy
 from datetime import date, timedelta
+from math import ceil
 
 import yaml
 
@@ -54,9 +55,9 @@ class ProperDate:
 
     def get_date_from_pi_sprint(self, pi, sprint=2, duration=1, team='x'):
         if pi is None:
-            pi = 10
+            pi = 11
         if sprint is None:
-            sprint = 2
+            sprint = 4
         alt = self.calculate_pi_start(pi, sprint)
         start = self.dates.get(pi, {}).get(sprint, {}).get(team, alt)
         cpis = self.add_days_skipping_weekends(start, duration)
@@ -71,7 +72,7 @@ def dump(data):
 def save_yaml_file(data, file_name):
     with open("./tasks/{}.yaml".format(file_name), 'w') as file:
         file.write(data)
-
+import logging
 
 def process(data, velocity=10):
     pd = ProperDate()
@@ -83,8 +84,9 @@ def process(data, velocity=10):
         if line.get("duration") is None:
             global_days_lengh = 14 if 'Sprint' in line['title'] or 'SP' in line['title'] else 0
             if global_days_lengh == 0:
-                days_lengh = round(int(story_points if story_points else 1) / (velocity / 10))
+                days_lengh = ceil(int(story_points if story_points else 1) / (velocity / 10))
                 days_to_add = days_lengh if days_lengh > 0 else 1
+                logging.debug(f"SP:{story_points} days_lengh:{days_lengh} days_to_add:{days_to_add}")
             else:
                 days_lengh = global_days_lengh
                 days_to_add = days_lengh
@@ -98,6 +100,10 @@ def process(data, velocity=10):
         if line.get("percent") is None:
             line["percent"] = percent.get(status, 0)
         # tags
+        if line.get('dependenton'):
+            line['dependentOn'] = [int(a) for a in line.get('dependenton').split(',')]
+            line.pop('dependenton')
+
         if line.get('tags'):
             tags = line.get('tags').split(';')
             for tag in tags:
