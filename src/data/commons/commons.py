@@ -2,6 +2,7 @@ from collections import defaultdict
 from copy import deepcopy
 from datetime import date, timedelta
 from math import ceil
+import logging
 
 import yaml
 
@@ -40,12 +41,13 @@ percent = {
 class ProperDate:
     def __init__(self):
         self.dates = nested_dict()
-        # IP > sprint > team
+        # PI > sprint > team
         self.dates[10][1]['x'] = date(2019, 10, 2)
-        self.pi_10 = date(2019, 10, 2)
+        self.dates[11][1]['x'] = date(2019, 11, 27)
+        self.dates[12][1]['x'] = date(2020, 2, 5)
 
     def calculate_pi_start(self, pi, sprint):
-        return self.pi_10 + timedelta(days=14 * 4 * (pi - 10)) + timedelta(days=14 * (sprint - 1))
+        return self.dates[pi][1]['x'] + timedelta(days=14 * (sprint - 1))
 
     @staticmethod
     def add_days_skipping_weekends(adate, days):
@@ -58,8 +60,7 @@ class ProperDate:
             pi = 11
         if sprint is None:
             sprint = 4
-        alt = self.calculate_pi_start(pi, sprint)
-        start = self.dates.get(pi, {}).get(sprint, {}).get(team, alt)
+        start = self.dates.get(pi, {}).get(sprint, {}).get(team, self.calculate_pi_start(pi, sprint))
         cpis = self.add_days_skipping_weekends(start, duration)
         self.dates[pi][sprint][team] = cpis
         return str(start)
@@ -72,10 +73,10 @@ def dump(data):
 def save_yaml_file(data, file_name):
     with open("./tasks/{}.yaml".format(file_name), 'w') as file:
         file.write(data)
-import logging
+pd = ProperDate()
 
 def process(data, velocity=10):
-    pd = ProperDate()
+    global pd
     for line in data:
         line["type"] = "project"
         story_points = line.get('story_points', 0)
@@ -85,8 +86,7 @@ def process(data, velocity=10):
             global_days_lengh = 14 if 'Sprint' in line['title'] or 'SP' in line['title'] else 0
             if global_days_lengh == 0:
                 days_lengh = ceil(int(story_points if story_points else 1) / (velocity / 10))
-                days_to_add = days_lengh if days_lengh > 0 else 1
-                logging.debug(f"SP:{story_points} days_lengh:{days_lengh} days_to_add:{days_to_add}")
+                logging.debug(f"SP:{story_points} days_lengh:{days_lengh}")
             else:
                 days_lengh = global_days_lengh
                 days_to_add = days_lengh
@@ -124,7 +124,7 @@ def process(data, velocity=10):
             line['start'] = pd.get_date_from_pi_sprint(
                 line.get('pi'),
                 line.get('sprint'),
-                days_to_add,
+                days_lengh,
                 team=line.get('team')
             )
     return dump(data)
