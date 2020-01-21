@@ -40,7 +40,7 @@ def process_excel_file(file):
         if area == "teams":
             output = dump(data_set)
         else:
-            output = process(data_set, cfg.get(area, 1))
+            output = process(data_set, cfg.get(area, 1), area=area)
         save_yaml_file(output, area)
         logging.info(f"{area} Done")
 

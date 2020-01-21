@@ -74,3 +74,29 @@ python tests.py
 ```
 
  
+## Instruction how to Use for Product Owners
+
+Keep in mind that You need to run before hand following steps:
+* Installation of optional dependencies
+* Install Python dependencies
+* Project setup - JS
+
+#### To run the server
+press windos+R and type cmd, enter
+
+change the directory using `cd` command to the one You have the package unzpied - example below and than run the second command.
+```
+cd C:\Users\Piotr\gfi-vue-gantt
+npm run serve
+```
+
+## To rebuild the data source from excel file
+Rember to save the excel file.
+ 
+press windos+R and type cmd, enter
+
+change the directory using `cd` command to the one .\data\src under your unzpied package  - example below and than run the second command.
+```
+cd C:\Users\Piotr\gfi-vue-gantt\data\src
+python excel.py
+```

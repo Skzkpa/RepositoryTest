@@ -10,14 +10,14 @@
       fill: '#8E44AD'
       stroke: '#7E349D'
   tags: Apes; Milestone C; Release 1.3; YAML
-  team: apes
+  team: infrastructure
   title: YAML migrate pipelines - Apes
   type: project
 - duration: 172800000
   id: 143088
   milestone: C
   percent: 20
-  start: '2020-01-08'
+  start: '2020-01-10'
   status: Active
   story_points: 6
   style:
@@ -25,7 +25,7 @@
       fill: '#8E44AD'
       stroke: '#7E349D'
   tags: Milestone C; Monkeys; Release 1.3; YAML
-  team: monkeys
+  team: infrastructure
   title: YAML migrate pipelines - Monkeys
   type: project
 - dependentOn:
@@ -35,7 +35,7 @@
   id: 143136
   milestone: C
   percent: 20
-  start: '2020-01-10'
+  start: '2020-01-12'
   status: Active
   story_points: 5
   style:
@@ -43,14 +43,14 @@
       fill: '#8E44AD'
       stroke: '#7E349D'
   tags: Apes; Milestone C; Release 1.3; YAML
-  team: apes
+  team: infrastructure
   title: YAML Scripts - Apes
   type: project
 - duration: 172800000
   id: 142138
   milestone: C
   percent: 20
-  start: '2020-01-08'
+  start: '2020-01-14'
   status: Active
   story_points: 5
   style:
@@ -58,6 +58,7 @@
       fill: '#8E44AD'
       stroke: '#7E349D'
   tags: Milestone C; Release 1.3
+  team: infrastructure
   title: Upgrade tableau autoamted deployment to use 2019.4
   type: project
 - duration: 7257600000
@@ -72,7 +73,7 @@
       fill: '#8E44AD'
       stroke: '#7E349D'
   tags: Apes; Milestone D; Release 1.4
-  team: apes
+  team: infrastructure
   title: Disaster Recovery Support and Integration
   type: project
 - duration: 1209600000
@@ -88,7 +89,7 @@
       fill: '#8E44AD'
       stroke: '#7E349D'
   tags: Apes; CSME MVP; Milestone C; PI11; Release 1.3
-  team: apes
+  team: infrastructure
   title: Release Pipeline Support - Sprint 11.4 - Team Buzzard-Apes
   type: project
 - duration: 1209600000
@@ -104,7 +105,7 @@
       fill: '#8E44AD'
       stroke: '#7E349D'
   tags: Milestone C; Monkeys; PI11; Release 1.3
-  team: monkeys
+  team: infrastructure
   title: Release Pipeline Support - Sprint 11.4 - Team Buzzard-Monkeys
   type: project
 - duration: 259200000
@@ -113,7 +114,7 @@
   percent: 20
   pi: 11
   sprint: 4
-  start: '2020-01-10'
+  start: '2020-01-16'
   status: Active
   story_points: 10
   style:
@@ -121,14 +122,14 @@
       fill: '#8E44AD'
       stroke: '#7E349D'
   tags: CB_APPROVED; CSME MVP; Milestone C; Monkeys; PI11; Release 1.3; sprint 4
-  team: monkeys
+  team: infrastructure
   title: "[Automation]:\_ Network adjustments - testing"
   type: project
 - duration: 86400000
   id: 140669
   milestone: C
   percent: 20
-  start: '2020-01-13'
+  start: '2020-01-19'
   status: Active
   story_points: 2
   style:
@@ -136,14 +137,14 @@
       fill: '#8E44AD'
       stroke: '#7E349D'
   tags: Milestone C; Monkeys; Release 1.3
-  team: monkeys
+  team: infrastructure
   title: Onboarding Adam Jankowski
   type: project
 - duration: 172800000
   id: 141665
   milestone: E
   percent: 0
-  start: '2020-01-10'
+  start: '2020-01-20'
   status: New
   story_points: 5
   style:
@@ -151,13 +152,14 @@
       fill: '#0287D0'
       stroke: '#0077C0'
   tags: FTD_v1; Milestone E; Release 1.5; Review
+  team: infrastructure
   title: '[F170] Databricks deploy'
   type: project
 - duration: 172800000
   id: 141924
   milestone: C
   percent: 0
-  start: '2020-01-14'
+  start: '2020-01-22'
   status: New
   story_points: 5
   style:
@@ -165,14 +167,14 @@
       fill: '#0287D0'
       stroke: '#0077C0'
   tags: Milestone C; Monkeys; Release 1.3
-  team: monkeys
+  team: infrastructure
   title: Hardcoded redirectURIs - domain EHM names
   type: project
 - duration: 259200000
   id: 142139
   milestone: C
   percent: 0
-  start: '2020-01-12'
+  start: '2020-01-24'
   status: New
   story_points: 10
   style:
@@ -180,13 +182,14 @@
       fill: '#0287D0'
       stroke: '#0077C0'
   tags: Milestone C; Release 1.3
+  team: infrastructure
   title: Migration module release improvements for 1.3
   type: project
 - duration: 172800000
   id: 142141
   milestone: C
   percent: 0
-  start: '2020-01-15'
+  start: '2020-01-27'
   status: New
   story_points: 5
   style:
@@ -194,13 +197,14 @@
       fill: '#0287D0'
       stroke: '#0077C0'
   tags: Milestone C; Release 1.3
+  team: infrastructure
   title: Domain names EHM support
   type: project
 - duration: 172800000
   id: 142143
   milestone: C
   percent: 0
-  start: '2020-01-17'
+  start: '2020-01-29'
   status: New
   story_points: 8
   style:
@@ -208,13 +212,14 @@
       fill: '#0287D0'
       stroke: '#0077C0'
   tags: Milestone C; Release 1.3
+  team: infrastructure
   title: Mergining with stg1,2 and mig3 branches
   type: project
 - duration: 172800000
   id: 142372
   milestone: C
   percent: 0
-  start: '2020-01-12'
+  start: '2020-01-31'
   status: New
   story_points: 5
   style:
@@ -222,7 +227,7 @@
       fill: '#0287D0'
       stroke: '#0077C0'
   tags: Apes; Milestone C; Release 1.3
-  team: apes
+  team: infrastructure
   title: Fix the issues with tagging
   type: project
 - duration: 259200000
@@ -239,14 +244,14 @@
       fill: '#0287D0'
       stroke: '#0077C0'
   tags: Apes; Milestone C; PI11; Release 1.3; sprint 5
-  team: apes
+  team: infrastructure
   title: 'Back up and Restore: DWH'
   type: project
 - duration: 259200000
   id: 139426
   milestone: C
   percent: 0
-  start: '2020-01-19'
+  start: '2020-02-02'
   status: New
   story_points: 10
   style:
@@ -254,6 +259,7 @@
       fill: '#0287D0'
       stroke: '#0077C0'
   tags: Milestone C; Release 1.3
+  team: infrastructure
   title: '[Automation] Adjustments for scripts to use new config files - subscription
     1'
   type: project
@@ -270,13 +276,14 @@
       fill: '#0287D0'
       stroke: '#0077C0'
   tags: Milestone C; PI11; Release 1.3
+  team: infrastructure
   title: Release 1.3 pipeline adjustments and support
   type: project
 - duration: 172800000
   id: 139428
   milestone: C
   percent: 0
-  start: '2020-01-16'
+  start: '2020-02-05'
   status: New
   story_points: 8
   style:
@@ -284,7 +291,7 @@
       fill: '#0287D0'
       stroke: '#0077C0'
   tags: Milestone C; Monkeys; Release 1.3
-  team: monkeys
+  team: infrastructure
   title: "Automation of provisioning subscriptions: moving away from excel file\_"
   type: project
 - duration: 259200000
@@ -293,7 +300,7 @@
   percent: 0
   pi: 11
   sprint: 5
-  start: '2020-01-22'
+  start: '2020-01-25'
   status: New
   story_points: 10
   style:
@@ -301,7 +308,7 @@
       fill: '#0287D0'
       stroke: '#0077C0'
   tags: CB_APPROVED; CSME MVP; Milestone C; Monkeys; PI11; Release 1.3; sprint 5
-  team: monkeys
+  team: infrastructure
   title: 'Automation of provisioning subscriptions: configuration design - subscriptions
     - part 2'
   type: project
@@ -309,7 +316,7 @@
   id: 142434
   milestone: C
   percent: 0
-  start: '2020-01-22'
+  start: '2020-02-07'
   status: New
   story_points: 11
   style:
@@ -317,6 +324,7 @@
       fill: '#0287D0'
       stroke: '#0077C0'
   tags: Milestone C; Release 1.3
+  team: infrastructure
   title: Security compliance IP11.2-5 buffer
   type: project
 - duration: 172800000
@@ -325,7 +333,7 @@
   percent: 0
   pi: 11
   sprint: 5
-  start: '2020-01-25'
+  start: '2020-01-28'
   status: New
   story_points: 8
   style:
@@ -333,7 +341,7 @@
       fill: '#0287D0'
       stroke: '#0077C0'
   tags: Apes; CSME MVP; Milestone C; PI11; Release 1.3; sprint 5
-  team: apes
+  team: infrastructure
   title: Relation based deployment
   type: project
 - duration: 172800000
@@ -342,7 +350,7 @@
   percent: 0
   pi: 11
   sprint: 4
-  start: '2020-01-14'
+  start: '2020-02-10'
   status: New
   story_points: 8
   style:
@@ -350,14 +358,14 @@
       fill: '#0287D0'
       stroke: '#0077C0'
   tags: Apes; Milestone C; PI11; Release 1.3; sprint 4
-  team: apes
+  team: infrastructure
   title: 'Back up and Restore: Cosmos DB'
   type: project
 - duration: 86400000
   id: 142435
   milestone: D
   percent: 0
-  start: '2020-01-25'
+  start: '2020-02-12'
   status: New
   story_points: 1
   style:
@@ -365,13 +373,14 @@
       fill: '#0287D0'
       stroke: '#0077C0'
   tags: Milestone D
+  team: infrastructure
   title: Storing secrets in a proper way within repo
   type: project
 - duration: 86400000
   id: 142436
   milestone: D
   percent: 0
-  start: '2020-01-26'
+  start: '2020-02-13'
   status: New
   story_points: 1
   style:
@@ -379,13 +388,14 @@
       fill: '#0287D0'
       stroke: '#0077C0'
   tags: Milestone D
+  team: infrastructure
   title: Secret validation and Mapping of secrets
   type: project
 - duration: 172800000
   id: 142439
   milestone: D
   percent: 0
-  start: '2020-01-27'
+  start: '2020-02-14'
   status: New
   story_points: 5
   style:
@@ -393,6 +403,7 @@
       fill: '#0287D0'
       stroke: '#0077C0'
   tags: Milestone D; Release 1.4
+  team: infrastructure
   title: Clean up of branches, RD, Task Groups etc.
   type: project
 - duration: 1209600000
@@ -408,7 +419,7 @@
       fill: '#0287D0'
       stroke: '#0077C0'
   tags: Apes; CSME MVP; Milestone C; PI11; Release 1.3
-  team: apes
+  team: infrastructure
   title: Release Pipeline Support - Sprint 11.5 - Team Buzzard-Apes
   type: project
 - duration: 1209600000
@@ -424,7 +435,7 @@
       fill: '#0287D0'
       stroke: '#0077C0'
   tags: Milestone C; Monkeys; PI11; Release 1.3
-  team: monkeys
+  team: infrastructure
   title: Release Pipeline Support - Sprint 11.5 - Team Buzzard-Monkeys
   type: project
 - duration: 1209600000
@@ -440,7 +451,7 @@
       fill: '#0287D0'
       stroke: '#0077C0'
   tags: Apes; CSME MVP; Milestone C; PI11; Release 1.3
-  team: apes
+  team: infrastructure
   title: Release Pipeline Support - Sprint 12.1 - Team Buzzard-Apes
   type: project
 - duration: 1209600000
@@ -456,7 +467,7 @@
       fill: '#0287D0'
       stroke: '#0077C0'
   tags: Milestone C; Monkeys; PI11; Release 1.3
-  team: monkeys
+  team: infrastructure
   title: Release Pipeline Support - Sprint 12.1 - Team Buzzard-Monkeys
   type: project
 - duration: 1209600000
@@ -472,7 +483,7 @@
       fill: '#0287D0'
       stroke: '#0077C0'
   tags: Apes; CSME MVP; Milestone C; PI11; Release 1.3
-  team: apes
+  team: infrastructure
   title: Release Pipeline Support - Sprint 12.2 - Team Buzzard-Apes
   type: project
 - duration: 1209600000
@@ -488,7 +499,7 @@
       fill: '#0287D0'
       stroke: '#0077C0'
   tags: Milestone C; Monkeys; PI11; Release 1.3
-  team: monkeys
+  team: infrastructure
   title: Release Pipeline Support - Sprint 12.2- Team Buzzard-Monkeys
   type: project
 - duration: 1209600000
@@ -504,7 +515,7 @@
       fill: '#0287D0'
       stroke: '#0077C0'
   tags: Apes; CSME MVP; Milestone C; PI11; Release 1.3
-  team: apes
+  team: infrastructure
   title: Release Pipeline Support - Sprint 12.3- Team Buzzard-Apes
   type: project
 - duration: 1209600000
@@ -520,7 +531,7 @@
       fill: '#0287D0'
       stroke: '#0077C0'
   tags: Milestone C; Monkeys; PI11; Release 1.3
-  team: monkeys
+  team: infrastructure
   title: Release Pipeline Support - Sprint 12.3 - Team Buzzard-Monkeys
   type: project
 - duration: 1209600000
@@ -536,7 +547,7 @@
       fill: '#0287D0'
       stroke: '#0077C0'
   tags: Apes; CSME MVP; Milestone C; PI11; Release 1.3
-  team: apes
+  team: infrastructure
   title: Release Pipeline Support - Sprint 12.4 - Team Buzzard-Apes
   type: project
 - duration: 1209600000
@@ -552,6 +563,6 @@
       fill: '#0287D0'
       stroke: '#0077C0'
   tags: Milestone C; Monkeys; PI11; Release 1.3
-  team: monkeys
+  team: infrastructure
   title: Release Pipeline Support - Sprint 12.4 - Team Buzzard-Monkeys
   type: project

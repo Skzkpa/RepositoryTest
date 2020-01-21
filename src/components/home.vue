@@ -16,6 +16,8 @@
     import sm from "../data/tasks/sm.yaml"
     import integration from "../data/tasks/integration.yaml"
     import epsui from "../data/tasks/epsui.yaml"
+    import systeam from "../data/tasks/systeam.yaml"
+    import lmf from "../data/tasks/lmf.yaml"
 
 
     export default {
@@ -29,6 +31,8 @@
                     sm,
                     integration,
                     epsui,
+                    systeam,
+                    lmf,
                 }
             }
         },

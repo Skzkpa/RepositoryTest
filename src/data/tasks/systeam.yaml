@@ -1,19 +1,20 @@
 - duration: 86400000
-  id: 135457
+  id: 123121
   percent: 100
   start: '2020-01-08'
   status: Closed
+  story_points: 2
   style:
     base:
       fill: '#1EBC61'
       stroke: '#0EAC51'
   tags: A
-  team: integration
-  title: int3
+  team: systeam
+  title: sys1
   type: project
-- duration: 172800000
-  id: 137195
-  percent: 20
+- duration: 259200000
+  id: 123124
+  percent: 25
   start: '2020-01-09'
   status: Active
   story_points: 8
@@ -22,16 +23,16 @@
       fill: '#8E44AD'
       stroke: '#7E349D'
   tags: B
-  team: integration
-  title: int5
+  team: systeam
+  title: sys2
   type: project
-- duration: 259200000
-  id: 132639
-  percent: 0
-  start: '2020-01-11'
+- duration: 691200000
+  id: 123125
+  percent: 10
+  start: '2020-01-12'
   status: Blocked
   story_points: 20
   tags: C
-  team: integration
-  title: ing6
+  team: systeam
+  title: sys3
   type: project

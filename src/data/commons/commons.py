@@ -75,7 +75,7 @@ def save_yaml_file(data, file_name):
         file.write(data)
 pd = ProperDate()
 
-def process(data, velocity=10):
+def process(data, velocity=10, area="x"):
     global pd
     for line in data:
         line["type"] = "project"
@@ -114,17 +114,16 @@ def process(data, velocity=10):
                     line['sprint'] = int(tag[-1])
                 elif tag.startswith('pi'):
                     line['pi'] = int(tag[2:])
-                elif tag in ['apes', 'monkeys']:
-                    line['team'] = tag
         # style
         if status.lower() != 'blocked':
             line['style'] = deepcopy(styles.get(status))
+        line['team'] = area
         # start
         if line.get("start") is None:
             line['start'] = pd.get_date_from_pi_sprint(
                 line.get('pi'),
                 line.get('sprint'),
                 days_lengh,
-                team=line.get('team')
+                team=area
             )
     return dump(data)
