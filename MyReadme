@@ -1,0 +1,8 @@
+Test VM command list
+
+sudo app-get update -
+sudo apt install npm -
+sudo apt install python-pip -
+sudo apt-get install git / dla vmki testowej
+
+
