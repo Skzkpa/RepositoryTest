@@ -1,8 +1,19 @@
+What i did
 Test VM command list
 
 sudo app-get update -
 sudo apt install npm -
-sudo apt install python-pip -
+sudo apt install python3-pip -
 sudo apt-get install git / dla vmki testowej
+git clone https://github.com/Skzkpa/gfi-vue-gantt-elastic.git
+cd gfi-vue-elastic-gannt
+git remote -v
+pip3 install -r ./src/data/requirements -
+test.py jest w src/data/test.py
+python3 excel.py - nalezy odpalic jako python3
+
+
+
+
 
 
