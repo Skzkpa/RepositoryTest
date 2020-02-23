@@ -10,7 +10,7 @@ variables:
   location: westeurope
   containerName: mywebcontainer
   subscription: 861b334c-aa11-4193-b05b-d89173220565
-  subscriptionName: Azure dla studentów
+  subscriptionName: Azure dla studentów (861b334c-aa11-4193-b05b-d89173220565)
 
 stages:
 - stage: 'Gantt_Build'
