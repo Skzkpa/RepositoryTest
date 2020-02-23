@@ -20,5 +20,7 @@ stages:
         echo "____D_O_N_E____"
         echo "Y" | sudo apt install python3-pip
         echo "____D_O_N_E____"
+        echo "Y" | sudo apt-get install python3-setuptools
+        echo "____D_O_N_E____"
         echo "Y" | pip3 install -r ./src/data/requirements
       displayName: 'Install prerequisites'
