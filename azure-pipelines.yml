@@ -41,11 +41,11 @@ stages:
 - stage: 'Deploy_Grantt'
   displayName: 'Deploy grantt to static web site'
   jobs:
- - job: 'StorageandStaticWebSite'
-   steps:
-   - task: AzurePowerShell@4
-     inputs:
-      azureSubscription: $(subscriptionname)
-      ScriptType: 'InlineScript'
-      Inline: |
-        Select-AzSubscription -Subscription $(subscription)
+  - job: 'StorageandStaticWebSite'
+    steps:
+    - task: AzurePowerShell@4
+      inputs:
+        azureSubscription: $(subscriptionname)
+        ScriptType: 'InlineScript'
+        Inline: |
+          Select-AzSubscription -Subscription $(subscription)
