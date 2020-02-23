@@ -14,7 +14,7 @@ stages:
     
     steps:
     - script: |
-        echo "Y" | sudo app-get update
+        sudo app-get update
         echo "____D_O_N_E____"
         echo "Y" | sudo apt install npm
         echo "____D_O_N_E____"
