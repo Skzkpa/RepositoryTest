@@ -6,10 +6,10 @@ pool:
   vmImage: 'ubuntu-18.04'
 
 stages:
-- stage: 'Gant Build'
+- stage: 'Gantt_Build'
   displayName: 'This stage is for building gantt app'
   jobs:
-  - job: 'Install&Build'
+  - job: 'InstallandBuild'
     displayName: Install prerequisites & build app'
     
     steps:
