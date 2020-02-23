@@ -38,9 +38,14 @@ stages:
     - task: PublishBuildArtifacts@1
       displayName: 'Publish Artifact'
 
-# - stage: 'Deploy_Grantt'
-#   displayName: 'Deploy grantt to static web site'
-#   jobs:
-#   - job: 'StorageandStaticWebSite'
-#   steps:
-#   - script: |
+- stage: 'Deploy_Grantt'
+  displayName: 'Deploy grantt to static web site'
+  jobs:
+ - job: 'StorageandStaticWebSite'
+   steps:
+   - task: AzurePowerShell@4
+     inputs:
+      azureSubscription: $(subscriptionname)
+      ScriptType: 'InlineScript'
+      Inline: |
+        Select-AzSubscription -Subscription $(subscription)
