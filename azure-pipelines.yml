@@ -5,6 +5,13 @@ trigger:
 pool:
   vmImage: 'ubuntu-18.04'
 
+variables:
+  resourceGroupName: GanttTask
+  location: westeurope
+  containerName: mywebcontainer
+  subscription: 861b334c-aa11-4193-b05b-d89173220565
+  subscriptionName: Azure dla studentów
+
 stages:
 - stage: 'Gantt_Build'
   displayName: 'This stage is for building gantt app'
@@ -19,6 +26,21 @@ stages:
         echo "Y" | sudo apt install python3-pip
         echo "Y" | sudo apt-get install python3-setuptools
         echo "Y" | pip3 install -r ./src/data/requirements #workin to this moment
-        cd src/data/
-        echo "Y" | python3 excel.py
+        #cd src/data/
+        #echo "Y" | python3 excel.py
       displayName: 'Install prerequisites'
+    
+    - task: ArchiveFiles@2
+      displayName: 'Archive installed files'
+      inputs:
+        rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
+
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish Artifact'
+
+# - stage: 'Deploy_Grantt'
+#   displayName: 'Deploy grantt to static web site'
+#   jobs:
+#   - job: 'StorageandStaticWebSite'
+#   steps:
+#   - script: |
