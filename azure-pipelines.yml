@@ -19,5 +19,6 @@ stages:
         echo "Y" | sudo apt install python3-pip
         echo "Y" | sudo apt-get install python3-setuptools
         echo "Y" | pip3 install -r ./src/data/requirements #workin to this moment
-        echo "Y" | .src/data/python3 excel.py
+        cd src/data/
+        echo "Y" | python3 excel.py
       displayName: 'Install prerequisites'
