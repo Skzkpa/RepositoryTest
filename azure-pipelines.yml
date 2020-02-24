@@ -7,7 +7,7 @@ pool:
 
 variables:
   resourceGroupName: GanttTask
-  storageAccountName: MyTaskStorage
+  storageAccountName: mytaskstorage
   location: westeurope
   containerName: mywebcontainer
   subscription: 861b334c-aa11-4193-b05b-d89173220565
@@ -62,5 +62,8 @@ stages:
             New-AzStorageAccount -ResourceGroupName $(resourceGroupName) -Name $(storageAccountName) -Location $(location) -SkuName Standard_LRS -AccessTier Hot
           }
           Set-AzCurrentStorageAccount -ResourceGroupName $(resourceGroupName) -Name $(storageAccountName)
-          
+          #open firewall for storage
+          Update-AzStorageAccountNetworkRuleSet -ResourceGroupName $(resourceGroupName) -DefaultAction Allow -Bypass AzureServices,Metrics,Logging
+          Enable-AzStorageStaticWebsite -Context $storageAccount.Context -IndexDocument index.html -ErrorDocument404Path index.html 
+          echo $storageAccount.Context
         azurePowerShellVersion: 'LatestVersion'
