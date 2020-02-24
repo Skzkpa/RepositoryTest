@@ -3,8 +3,7 @@ trigger:
 - master
 
 pool:
-  name: HostedVS2017
-  demands: azureps
+  vmImage: 'windows-latest'
 
 variables:
   resourceGroupName: GanttTask
