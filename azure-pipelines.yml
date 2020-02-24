@@ -30,9 +30,6 @@ stages:
           echo "Y" | sudo apt install python3-pip
           echo "Y" | sudo apt-get install python3-setuptools
           echo "Y" | pip3 install -r ./src/data/requirements #workin to this moment
-        #  cd src/data/
-        #  echo "Y" | python3 excel.py
-      
     
     - task: ArchiveFiles@2
       displayName: 'Archive installed files'
