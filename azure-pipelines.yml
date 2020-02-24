@@ -80,7 +80,7 @@ stages:
     - task: AzureFileCopy@3
       displayName: 'Coping files to $web'
       inputs:
-        sourcePath: $(System.DefaultWorkingDirectory)\public\
+        sourcePath: $(System.DefaultWorkingDirectory)\public
         azureSubscription: $(subscriptionname)
         destination: 'AzureBlob'
         storage: $(storageAccountName)
