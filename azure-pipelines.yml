@@ -3,8 +3,7 @@ trigger:
 - master
 
 pool:
-  name: Hosted VS2017
-  demands: azureps
+  vmImage: 'windows-latest'
 
 variables:
   resourceGroupName: GanttTask
@@ -87,17 +86,17 @@ stages:
         storage: $(storageAccountName)
         ContainerName: '$web'
 
-    - task: AzurePowerShell@4
-      inputs:
-        azureSubscription: $(subscriptionname)
-        sriptType: 'InlineScript'
-        Inline: |
-          cd $(System.DefaultWorkingDircetory)
-          $ip = "193.46.212.2"
-          Update-AzStorageAccountRuleSet -ResourceGroupName $(resourceGroupName) -Name $(storageAccountName) -DefaultAction Deny -Bypass AzureServices,Metrics,Logging
-          Remove-AzStorageAccountNetworkRule -ResourceGroupName $(resourceGroupName) -Name $(storageAccountName) -ErrorAction SilentlyContinue -IPAddressOrRange $ip -ErrorVariable no_rule
-          if($null -ne $no_rule)
-          {
-          Add-AzStorageAccountNetworkRule -ResourceGroupName $(resourceGroupName) -Name $(storageAccountName) -IPAddressOrRange $ip
-          }
-        azurePowerShellVersion: 'LatestVersion'
+    # - task: AzurePowerShell@4
+    #   inputs:
+    #     azureSubscription: $(subscriptionname)
+    #     sriptType: 'InlineScript'
+    #     Inline: |
+    #       cd $(System.DefaultWorkingDircetory)
+    #       $ip = "193.46.212.2"
+    #       Update-AzStorageAccountRuleSet -ResourceGroupName $(resourceGroupName) -Name $(storageAccountName) -DefaultAction Deny -Bypass AzureServices,Metrics,Logging
+    #       Remove-AzStorageAccountNetworkRule -ResourceGroupName $(resourceGroupName) -Name $(storageAccountName) -ErrorAction SilentlyContinue -IPAddressOrRange $ip -ErrorVariable no_rule
+    #       if($null -ne $no_rule)
+    #       {
+    #       Add-AzStorageAccountNetworkRule -ResourceGroupName $(resourceGroupName) -Name $(storageAccountName) -IPAddressOrRange $ip
+    #       }
+    #     azurePowerShellVersion: 'LatestVersion'
