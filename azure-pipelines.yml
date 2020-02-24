@@ -7,6 +7,7 @@ pool:
 
 variables:
   resourceGroupName: GanttTask
+  storageAccountName: MyTaskStorage
   location: westeurope
   containerName: mywebcontainer
   subscription: 861b334c-aa11-4193-b05b-d89173220565
@@ -50,3 +51,16 @@ stages:
         ScriptType: 'InlineScript'
         Inline: |
           Select-AzSubscription -Subscription $(subscription)
+          $check_rg = Get-AzResourceGroup -Name $(resourceGroupName) -Location $(location) -ErrorAction SilentlyContinue
+          if($null -eq $check_rg)
+          {
+            New-AzResourceGroup -Name $(resourceGroupName) -Location $(location)
+          }
+          $check_storage = Get-AzStorageAccount -Name $(storageAccountName) -ResourceGroupName $(resourceGroupName) -ErrorAction SilentlyContinue
+          if($null -eq $check_storage)
+          {
+            New-AzStorageAccount -ResourceGroupName $(resourceGroupName) -Name $(storageAccountName) -Location $(location) -SkuName Standard_LRS -AccessTier Hot
+          }
+          Set-AzCurrentStorageAccount -ResourceGroupName $(resourceGroupName) -Name $(storageAccountName)
+          
+        azurePowerShellVersion: 'LatestVersion'
