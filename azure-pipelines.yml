@@ -94,4 +94,4 @@ stages:
           $ip = "193.46.212.2"
           Update-AzStorageAccountRuleSet -ResourceGroupName $(resourceGroupName) -Name $(storageAccountName) -DefaultAction Deny -Bypass AzureServices,Metrics,Logging
           Add-AzStorageAccountNetworkRule -ResourceGroupName $(resourceGroupName) -Name $(storageAccountName) -IPAddressOrRange $ip
-      azurePowerShellVersion: 'LatestVersion'
+        azurePowerShellVersion: 'LatestVersion'
