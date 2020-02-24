@@ -91,6 +91,7 @@ stages:
         azureSubscription: $(subscriptionname)
         sriptType: 'InlineScript'
         Inline: |
+          cd $(System.DefaultWorkingDircetory)
           $ip = "193.46.212.2"
           Update-AzStorageAccountRuleSet -ResourceGroupName $(resourceGroupName) -Name $(storageAccountName) -DefaultAction Deny -Bypass AzureServices,Metrics,Logging
           Remove-AzStorageAccountNetworkRule -ResourceGroupName $(resourceGroupName) -Name $(storageAccountName) -ErrorAction SilentlyContinue -IPAddressOrRange $ip -ErrorVariable no_rule
