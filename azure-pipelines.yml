@@ -3,7 +3,8 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-18.04'
+  name: HostedVS2017
+  demands: azureps
 
 variables:
   resourceGroupName: GanttTask
@@ -20,15 +21,19 @@ stages:
     displayName: Install prerequisites & build app'
     
     steps:
-    - script: |
-        echo "Y" | sudo apt-get update
-        echo "Y" | sudo apt install npm
-        echo "Y" | sudo apt install python3-pip
-        echo "Y" | sudo apt-get install python3-setuptools
-        echo "Y" | pip3 install -r ./src/data/requirements #workin to this moment
-        #cd src/data/
-        #echo "Y" | python3 excel.py
+    - task: Bash@3
       displayName: 'Install prerequisites'
+      inputs:
+        targetType: 'inline'
+        script: |
+          echo "Y" | sudo apt-get update
+          echo "Y" | sudo apt install npm
+          echo "Y" | sudo apt install python3-pip
+          echo "Y" | sudo apt-get install python3-setuptools
+          echo "Y" | pip3 install -r ./src/data/requirements #workin to this moment
+        #  cd src/data/
+        #  echo "Y" | python3 excel.py
+      
     
     - task: ArchiveFiles@2
       displayName: 'Archive installed files'
