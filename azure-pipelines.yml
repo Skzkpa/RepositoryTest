@@ -65,5 +65,13 @@ stages:
           #open firewall for storage
           Update-AzStorageAccountNetworkRuleSet -ResourceGroupName $(resourceGroupName) -Name $(storageAccountName) -DefaultAction Allow -Bypass AzureServices,Metrics,Logging
           Enable-AzStorageStaticWebsite -Context $storageAccount.Context -IndexDocument index.html -ErrorDocument404Path index.html 
-          echo $storageAccount.Context
+
         azurePowerShellVersion: 'LatestVersion'
+
+    - task: AzureCLI@2
+      displayName: 'Delete remaining files from blob container recusevly'
+      inputs:
+        azureSubscription: $(subscriptionname)
+        scriptLocation: 'inlineScript'
+        inlineScript: |
+          az storage blob delete-batch --account-name $(storageAccountName) --source $web
