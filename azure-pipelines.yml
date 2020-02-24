@@ -72,6 +72,7 @@ stages:
       displayName: 'Delete remaining files from blob container recusevly'
       inputs:
         azureSubscription: $(subscriptionname)
+        scriptType: ps
         scriptLocation: 'inlineScript'
         inlineScript: |
           az storage blob delete-batch --account-name $(storageAccountName) --source $web
