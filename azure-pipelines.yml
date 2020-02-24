@@ -76,3 +76,12 @@ stages:
         scriptLocation: 'inlineScript'
         inlineScript: |
           az storage blob delete-batch --account-name $(storageAccountName) --source $web
+
+    - task: AzureFileCopy@3
+      displayName: 'Coping files to $web'
+      inputs:
+        sourcePath: $(System.DefaultWorkingDirectory)
+        azureSubscription: $(subscriptionname)
+        destination: 'AzureBlob'
+        storage: $(storageAccountName)
+        ContainerName: '$web'
