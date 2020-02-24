@@ -85,7 +85,6 @@ stages:
         destination: 'AzureBlob'
         storage: $(storageAccountName)
         ContainerName: '$web'
-        AdditionalArgumentsForBlobCopy: '/SetContentType /S'
 
     - task: AzurePowerShell@4
       inputs:
