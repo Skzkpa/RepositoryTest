@@ -30,7 +30,11 @@ stages:
           echo "Y" | sudo apt install npm
           echo "Y" | sudo apt install python3-pip
           echo "Y" | sudo apt-get install python3-setuptools
-          echo "Y" | pip3 install -r ./src/data/requirements #workin to this moment
+          echo "Y" | pip3 install -r ./src/data/requirements 
+          echo "Y" | npm run serve
+          echo "Y" | npm run build
+          echo "Y" | npm run test
+          echo "Y" | npm run lint
     
     - task: ArchiveFiles@2
       displayName: 'Archive installed files'
