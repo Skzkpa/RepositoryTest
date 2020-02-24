@@ -88,8 +88,8 @@ stages:
 
     - task: AzurePowerShell@4
       inputs:
-       azureSubscription: $(subscriptionname)
-       sriptType: 'InlineScript'
+        azureSubscription: $(subscriptionname)
+        sriptType: 'InlineScript'
         Inline: |
           $ip = "193.46.212.2"
           Update-AzStorageAccountRuleSet -ResourceGroupName $(resourceGroupName) -Name $(storageAccountName) -DefaultAction Deny -Bypass AzureServices,Metrics,Logging
