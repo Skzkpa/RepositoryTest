@@ -69,11 +69,9 @@ stages:
 
         azurePowerShellVersion: 'LatestVersion'
 
-    - task: AzureCLI@2
-      displayName: 'Delete remaining files from blob container recusevly'
+    - task: AzureCLI@1
       inputs:
         azureSubscription: $(subscriptionname)
-        scriptType: ps
         scriptLocation: 'inlineScript'
         inlineScript: |
           az storage blob delete-batch --account-name $(storageAccountName) --source $web
