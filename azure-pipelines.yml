@@ -32,7 +32,6 @@ stages:
           echo "Y" | sudo apt-get install python3-setuptools
           echo "Y" | pip3 install -r ./src/data/requirements 
           echo "DONE"
-          echo "DONE"
     
     - task: ArchiveFiles@2
       displayName: 'Archive installed files'
