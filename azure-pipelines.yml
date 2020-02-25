@@ -83,7 +83,7 @@ stages:
         azureSubscription: $(subscriptionname)
         scriptType: 'InlineScript'
         Inline: |
-        $cnotx = New-AzureStorageContext -StorageAccountName $(storageAccountName)
+          $cnotx = New-AzureStorageContext -StorageAccountName $(storageAccountName)
           Remove-AzureStorageContainer -Name '$web' -Context $cnotx -Force -PassThru
         azurePowerShellVersion: 'LatestVersion'
 
