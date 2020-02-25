@@ -75,7 +75,7 @@ stages:
     - task: AzureCLI@2
       inputs:
         azureSubscription: $(subscriptionname)
-        scriptType: ps
+        scriptType: pscore
         scriptLocation: 'inlineScript'
         inlineScript: |
           az storage blob delete-batch --account-name $(storageAccountName) --source $web
