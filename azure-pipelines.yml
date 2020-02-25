@@ -76,7 +76,7 @@ stages:
           Update-AzStorageAccountNetworkRuleSet -ResourceGroupName $(resourceGroupName) -Name $(storageAccountName) -DefaultAction Allow -Bypass AzureServices,Metrics,Logging
           Enable-AzStorageStaticWebsite -Context $storageAccount.Context -IndexDocument index.html -ErrorDocument404Path index.html 
           cd $(System.DefaultWorkingDirectory)
-          ls -a
+          ls 
           
 
         azurePowerShellVersion: 'LatestVersion'
@@ -91,7 +91,7 @@ stages:
     - task: AzureFileCopy@3
       displayName: 'Coping files to $web'
       inputs:
-        sourcePath: $(System.DefaultWorkingDirectory)/WebApp
+        sourcePath: $(System.DefaultWorkingDirectory)
         azureSubscription: $(subscriptionname)
         destination: 'AzureBlob'
         storage: $(storageAccountName)
