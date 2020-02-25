@@ -33,6 +33,8 @@ stages:
           echo "Y" | pip3 install -r ./src/data/requirements 
           cd $(System.DefaultWorkingDirectory)/src/data
           python3 excel.py
+          cd $(System.DefaultWorkingDirectory)
+          npm run serve
     
     - task: ArchiveFiles@2
       displayName: 'Archive installed files'
@@ -79,14 +81,6 @@ stages:
         scriptLocation: 'inlineScript'
         inlineScript: |
           az storage blob delete-batch --account-name $(storageAccountName) --source $web
-    # - task: AzurePowerShell@4
-    #   inputs:
-    #     azureSubscription: $(subscriptionname)
-    #     scriptType: 'InlineScript'
-    #     Inline: |
-    #       $StorageAccount = Get-AzStorageAccount -Name $(storageAccountName) -ResourceGroupName $(resourceGroupName)
-    #       Remove-AzStorageBlob -Container '$web' -Blob * -Context $StorageAccount.Context -DeleteSnapshot -Force -PassThru
-    #     azurePowerShellVersion: 'LatestVersion'
 
     - task: AzureFileCopy@3
       displayName: 'Coping files to $web'
