@@ -37,7 +37,7 @@ stages:
 
     - task: PublishPipelineArtifact@1
       inputs:
-        path: $(System.DefaultWorkingDirectory)/bin/WebApp
+        path: $(System.DefaultWorkingDirectory)
         artifact: WebApp 
 
 - stage: 'Deploy_Grantt'
