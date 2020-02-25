@@ -52,6 +52,8 @@ stages:
     - task: DownloadPipelineArtifact@2
       inputs:
         artifact: WebApp
+        path: $(System.DefaultWorkingDirectory)
+
 
     - task: AzurePowerShell@4
       inputs:
