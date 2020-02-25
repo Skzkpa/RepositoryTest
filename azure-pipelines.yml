@@ -42,7 +42,7 @@ stages:
 
     - task: PublishBuildArtifacts@1
       displayName: 'Publish Artifact'
-      pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
+        pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
 
 - stage: 'Deploy_Grantt'
   displayName: 'Deploy grantt to static web site'
@@ -52,9 +52,7 @@ stages:
       name: Hosted VS2017
       demands: azureps
     steps:
-    - task: DownloadBuildArtifacts@0
-      inputs:
-      buildType:
+
     - task: AzurePowerShell@4
       inputs:
         azureSubscription: $(subscriptionname)
