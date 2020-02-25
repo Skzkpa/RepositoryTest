@@ -2,9 +2,6 @@
 trigger:
 - master
 
-pool:
-  vmImage: 'ubuntu-latest'
-
 variables:
   resourceGroupName: GanttTask
   storageAccountName: mytaskstorage
@@ -19,6 +16,8 @@ stages:
   jobs:
   - job: 'InstallandBuild'
     displayName: Install prerequisites & build app'
+    pool:
+      vmImage: 'ubuntu-latest'
     
     steps:
     - task: Bash@3
@@ -47,6 +46,9 @@ stages:
   displayName: 'Deploy grantt to static web site'
   jobs:
   - job: 'StorageandStaticWebSite'
+    pool:
+    name: Hosted VS2017
+    demands: azureps
     steps:
     - task: AzurePowerShell@4
       inputs:
@@ -70,16 +72,10 @@ stages:
           Enable-AzStorageStaticWebsite -Context $storageAccount.Context -IndexDocument index.html -ErrorDocument404Path index.html 
 
         azurePowerShellVersion: 'LatestVersion'
-    - task: Bash@3
-      inputs:
-        targetType: 'inline'
-        script: |
-          wget -O - https://aka.ms/install-powershell.sh | sudo bash
 
-    - task: AzureCLI@2
+    - task: AzureCLI@1
       inputs:
         azureSubscription: $(subscriptionname)
-        scriptType: bash
         scriptLocation: 'inlineScript'
         inlineScript: |
           az storage blob delete-batch --account-name $(storageAccountName) --source $web
