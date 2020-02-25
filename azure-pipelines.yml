@@ -88,7 +88,7 @@ stages:
     - task: AzureFileCopy@3
       displayName: 'Coping files to $web'
       inputs:
-        sourcePath: $(Build.ArtifactStagingDirectory)/WebApp
+        sourcePath: $(Build.ArtifactStagingDirectory)/*.html
         azureSubscription: $(subscriptionname)
         destination: 'AzureBlob'
         storage: $(storageAccountName)
