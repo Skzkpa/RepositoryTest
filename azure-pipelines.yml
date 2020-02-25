@@ -72,12 +72,19 @@ stages:
 
         azurePowerShellVersion: 'LatestVersion'
 
-    - task: AzureCLI@1
+    # - task: AzureCLI@1
+    #   inputs:
+    #     azureSubscription: $(subscriptionname)
+    #     scriptLocation: 'inlineScript'
+    #     inlineScript: |
+    #       az storage blob delete-batch --account-name $(storageAccountName) --source $web
+    - task: AzurePowerShell@4
       inputs:
         azureSubscription: $(subscriptionname)
-        scriptLocation: 'inlineScript'
-        inlineScript: |
-          az storage blob delete-batch --account-name $(storageAccountName) --source $web
+        scriptType: 'InlineScript'
+        Inline: |
+          Remove-AzureStorageBlob -Blob $web -Container $(storageAccountName) -Context $storageAccount.Context
+        azurePowerShellVersion: 'LatestVersion'
 
     - task: AzureFileCopy@3
       displayName: 'Coping files to $web'
