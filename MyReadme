@@ -10,6 +10,7 @@ cd gfi-vue-elastic-gannt
 git remote -v
 pip3 install -r ./src/data/requirements -
 test.py jest w src/data/test.py
+sudo snap install vue
 python3 excel.py - nalezy odpalic jako python3
 
 ####npm i -S @vue/cli-service####
