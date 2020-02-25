@@ -28,8 +28,6 @@ stages:
         script: |
           sudo apt-get install -y powershell
           echo "Y" | sudo apt-get update
-          curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
-          wget -O - https://aka.ms/install-powershell.sh | sudo bash
           echo "Y" | sudo apt install npm
           echo "Y" | sudo apt install python3-pip
           echo "Y" | sudo apt-get install python3-setuptools
@@ -72,6 +70,11 @@ stages:
           Enable-AzStorageStaticWebsite -Context $storageAccount.Context -IndexDocument index.html -ErrorDocument404Path index.html 
 
         azurePowerShellVersion: 'LatestVersion'
+    - task: Bash@3
+      inputs:
+        targetType: 'inline'
+        script: |
+          wget -O - https://aka.ms/install-powershell.sh | sudo bash
 
     - task: AzureCLI@2
       inputs:
