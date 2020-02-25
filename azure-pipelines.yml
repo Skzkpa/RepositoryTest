@@ -72,22 +72,21 @@ stages:
 
         azurePowerShellVersion: 'LatestVersion'
 
-    # - task: AzureCLI@1
+    - task: AzureCLI@2
+      inputs:
+        azureSubscription: $(subscriptionname)
+        scriptType: ps
+        scriptLocation: 'inlineScript'
+        inlineScript: |
+          az storage blob delete-batch --account-name $(storageAccountName) --source $web
+    # - task: AzurePowerShell@4
     #   inputs:
     #     azureSubscription: $(subscriptionname)
-    #     scriptLocation: 'inlineScript'
-    #     inlineScript: |
-    #       az storage blob delete-batch --account-name $(storageAccountName) --source $web
-    - task: Bash@3
-      displayName: "Adding CLI"
-      inputs:
-        targetType: 'inline'
-        script: |
-          echo "deb [arch#amd64] https://packages.microsoft.com/repos/azure-cli/ wheezy main" | \
-          sudo tee /etc/apt/sources.list.d/azure-cli.list
-          sudo apt-key adv --keyserver packages.microsoft.com --recv-keys 417A0893
-          sudo apt-get install apt-transport-https
-          sudo apt-get update && sudo apt-get install azure-cli
+    #     scriptType: 'InlineScript'
+    #     Inline: |
+    #       $StorageAccount = Get-AzStorageAccount -Name $(storageAccountName) -ResourceGroupName $(resourceGroupName)
+    #       Remove-AzStorageBlob -Container '$web' -Blob * -Context $StorageAccount.Context -DeleteSnapshot -Force -PassThru
+    #     azurePowerShellVersion: 'LatestVersion'
 
     - task: AzureFileCopy@3
       displayName: 'Coping files to $web'
