@@ -75,6 +75,9 @@ stages:
           #open firewall for storage
           Update-AzStorageAccountNetworkRuleSet -ResourceGroupName $(resourceGroupName) -Name $(storageAccountName) -DefaultAction Allow -Bypass AzureServices,Metrics,Logging
           Enable-AzStorageStaticWebsite -Context $storageAccount.Context -IndexDocument index.html -ErrorDocument404Path index.html 
+          cd $(System.DefaultWorkingDirectory)
+          ls -a
+          
 
         azurePowerShellVersion: 'LatestVersion'
 
