@@ -42,6 +42,7 @@ stages:
 
     - task: PublishBuildArtifacts@1
       displayName: 'Publish Artifact'
+      inputs:
         pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
 
 - stage: 'Deploy_Grantt'
