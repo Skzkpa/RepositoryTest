@@ -84,7 +84,7 @@ stages:
         scriptType: 'InlineScript'
         Inline: |
           $StorageAccount = Get-AzStorageAccount -Name $(storageAccountName) -ResourceGroupName $(resourceGroupName)
-          Remove-AzStorageBlob -Container '$web' -Blob * -Context $StorageAccount.Context   
+          Remove-AzStorageBlob -Container '$web' -Blob * -Context $StorageAccount.Context -DeleteSnapshot -Force -PassThru
         azurePowerShellVersion: 'LatestVersion'
 
     - task: AzureFileCopy@3
