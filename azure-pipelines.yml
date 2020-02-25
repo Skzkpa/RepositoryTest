@@ -109,4 +109,3 @@ stages:
     #       {
     #       Add-AzStorageAccountNetworkRule -ResourceGroupName $(resourceGroupName) -Name $(storageAccountName) -IPAddressOrRange $ip
     #       }
-    #     azurePowerShellVersion: 'LatestVersion'
