@@ -34,16 +34,11 @@ stages:
           cd $(System.DefaultWorkingDirectory)/src/data
           python3 excel.py
           cd $(System.DefaultWorkingDirectory)
-    
-    - task: ArchiveFiles@2
-      displayName: 'Archive installed files'
-      inputs:
-        rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
 
-    - task: PublishBuildArtifacts@1
-      displayName: 'Publish Artifact'
+    - task: PublishPipelineArtifact@1
       inputs:
-        pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
+        path: $(System.DefaultWorkingDirectory)/WebApp
+        artifact: WebApp 
 
 - stage: 'Deploy_Grantt'
   displayName: 'Deploy grantt to static web site'
@@ -56,8 +51,7 @@ stages:
 
     - task: DownloadPipelineArtifact@2
       inputs:
-        source: 'current'
-        path: '$(Build.ArtifactStagingDirectory)'
+        artifact: WebApp
 
     - task: AzurePowerShell@4
       inputs:
@@ -92,7 +86,7 @@ stages:
     - task: AzureFileCopy@3
       displayName: 'Coping files to $web'
       inputs:
-        sourcePath: $(Build.ArtifactStagingDirectory)
+        sourcePath: $(Build.ArtifactStagingDirectory)/WebApp
         azureSubscription: $(subscriptionname)
         destination: 'AzureBlob'
         storage: $(storageAccountName)
