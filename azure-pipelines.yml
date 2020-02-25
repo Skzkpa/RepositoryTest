@@ -54,6 +54,11 @@ stages:
       demands: azureps
     steps:
 
+    - task: DownloadPipelineArtifact@2
+      inputs:
+        source: 'current'
+        path: '$(Build.ArtifactStagingDirectory)'
+
     - task: AzurePowerShell@4
       inputs:
         azureSubscription: $(subscriptionname)
