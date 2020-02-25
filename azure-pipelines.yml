@@ -83,7 +83,7 @@ stages:
         azureSubscription: $(subscriptionname)
         scriptType: 'InlineScript'
         Inline: |
-          Remove-AzStorageBlob -Blob "$web" -Container "mywebcontainer" -DeleteSnapshot -Force -PassThru
+          Remove-AzStorageBlob -Blob "$web" -Container "mywebcontainer" -DeleteSnapshot -Force -PassThru -Context $storageAccount.Context
         azurePowerShellVersion: 'LatestVersion'
 
     - task: AzureFileCopy@3
